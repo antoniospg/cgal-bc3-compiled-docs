@@ -1,0 +1,20 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Surface_mesh_topology
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_topology/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Surface_mesh_topology.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_topology/doc/Surface_mesh_topology/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_topology/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_topology/doc/Surface_mesh_topology/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_topology/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_topology/doc/Surface_mesh_topology
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Combinatorial_map.tag=../Combinatorial_map
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Generalized_map.tag=../Generalized_map
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Linear_cell_complex.tag=../Linear_cell_complex
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/BGL.tag=../BGL
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh.tag=../Surface_mesh
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polyhedron.tag=../Polyhedron
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_topology/doc/Surface_mesh_topology/fig

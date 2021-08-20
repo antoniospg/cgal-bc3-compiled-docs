@@ -1,0 +1,19 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Spatial_sorting
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Spatial_sorting/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Spatial_sorting.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Spatial_sorting/doc/Spatial_sorting/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Spatial_sorting/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Spatial_sorting/doc/Spatial_sorting/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Spatial_sorting/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Spatial_sorting/doc/Spatial_sorting
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circulator.tag=../Circulator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Stream_support.tag=../Stream_support
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Spatial_sorting/doc/Spatial_sorting/fig

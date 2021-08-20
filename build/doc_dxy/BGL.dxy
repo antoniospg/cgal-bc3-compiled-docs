@@ -1,0 +1,56 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BGL_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - CGAL and the Boost Graph Library"
+INPUT += /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/Euler_operations.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/iterator.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/helpers.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/generators.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/selection.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/split_graph_into_polylines.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/copy_face_graph.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/Graph_with_descriptor_with_graph.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/Face_filtered_graph.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/Dual.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/Seam_mesh.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/io.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/partition.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/METIS/partition_graph.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/METIS/partition_dual_graph.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include//CGAL/boost/graph/alpha_expansion_graphcut.h
+
+
+EXAMPLE_PATH               =  /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_skeletonization/examples \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Surface_mesh_segmentation/examples \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon_mesh_processing/examples \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Property_map/examples \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/examples
+
+ALIASES +=  "bgllink{1}=<a href=\"http://www.boost.org/libs/graph/doc/\1.html\"><code>\1</code></a>"
+
+# macros to be used inside the code
+ALIASES += "cgalNamedParamsBegin=<dl class=\"params\"><dt>Named Parameters</dt><dd> <table class=\"params\">"
+ALIASES += "cgalNamedParamsEnd=</table> </dd> </dl>"
+ALIASES += "cgalParamBegin{1}=<tr><td class=\"paramname\">\ref BGL_\1 \"\1\"</td><td>"
+ALIASES += "cgalParamEnd=</td></tr>"
+
+#macros for NamedParameters.txt
+ALIASES += "cgalNPTableBegin=<dl class=\"params\"><dt></dt><dd> <table class=\"params\">"
+ALIASES += "cgalNPTableEnd=</table> </dd> </dl>"
+ALIASES += "cgalNPBegin{1}=<tr><td class=\"paramname\">\1 </td><td>"
+ALIASES += "cgalNPEnd=</td></tr>"
+
+EXTRACT_ALL=NO
+HIDE_UNDOC_MEMBERS         =  YES
+HIDE_UNDOC_CLASSES         =  YES
+
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+EXPAND_AS_DEFINED      = CGAL_BGL_NP_TEMPLATE_PARAMETERS \
+                         CGAL_BGL_NP_CLASS
+
+
+# macros to be used inside the code
+ALIASES += "cgalAssociatedTypesBegin=<dl class=\"params\"><dt>Associated Types</dt><dd> <table class=\"params\">"
+ALIASES += "cgalAssociatedTypesEnd=</table> </dd> </dl>"
+ALIASES += "cgalAssociatedTypeBegin{1}=<tr><td class=\"paramname\">\1</td><td>"
+ALIASES += "cgalAssociatedTypeEnd=</td></tr>"

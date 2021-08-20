@@ -1,0 +1,14 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Hyperbolic_triangulation_2_defaults.dxy
+
+EXTRACT_PRIVATE = NO
+
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Hyperbolic_triangulation_2/examples
+
+PROJECT_NAME = "CGAL 5.1 - 2D Hyperbolic Delaunay Triangulations"
+
+HTML_EXTRA_STYLESHEET = /home/antonio/Documentos/gsoc/cgal-public-dev/Hyperbolic_triangulation_2/doc/Hyperbolic_triangulation_2/css/customstyle.css
+
+HTML_EXTRA_FILES = 	/home/antonio/Documentos/gsoc/cgal-public-dev/Hyperbolic_triangulation_2/doc/Hyperbolic_triangulation_2/fig/ht-empty-disks.svg \
+					/home/antonio/Documentos/gsoc/cgal-public-dev/Hyperbolic_triangulation_2/doc/Hyperbolic_triangulation_2/fig/poincare-disk.svg \
+					/home/antonio/Documentos/gsoc/cgal-public-dev/Hyperbolic_triangulation_2/doc/Hyperbolic_triangulation_2/fig/header.png \
+					/home/antonio/Documentos/gsoc/cgal-public-dev/Hyperbolic_triangulation_2/doc/Hyperbolic_triangulation_2/fig/hyperbolic-vs-euclidean.svg

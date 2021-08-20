@@ -1,0 +1,20 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Polygon
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Polygon.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/doc/Polygon/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/doc/Polygon/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/doc/Polygon
+INPUT += /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/include/
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circulator.tag=../Circulator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Stream_support.tag=../Stream_support
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon/doc/Polygon/fig

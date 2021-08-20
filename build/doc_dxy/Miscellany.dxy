@@ -1,0 +1,5 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Miscellany_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - Profiling tools, Hash Map, Union-find, Modifiers"
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Profiling_tools/examples
+

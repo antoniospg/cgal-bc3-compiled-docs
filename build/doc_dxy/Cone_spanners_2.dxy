@@ -1,0 +1,7 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Cone_spanners_2_defaults.dxy
+PROJECT_NAME = "CGAL 5.1 - Cone-Based Spanners"
+EXCLUDE      = /home/antonio/Documentos/gsoc/cgal-public-dev/Cone_spanners_2/include//CGAL/Cone_spanners_2
+EXTRACT_ALL                =  NO
+HIDE_UNDOC_CLASSES         =  YES
+HIDE_UNDOC_MEMBERS         =  YES
+ALIASES +=  gnuplot="<a href=\"http://www.gnuplot.info\">`Gnuplot`</a>"

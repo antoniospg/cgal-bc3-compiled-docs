@@ -1,0 +1,377 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/png" href="../Manual/g-196x196-doc.png"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CGAL 5.1 - IO Streams: User Manual</title>
+<!-- <link href="../Manual/tabs.css" rel="stylesheet" type="text/css"/> -->
+<script type="text/javascript" src="../Manual/jquery.js"></script>
+<script type="text/javascript" src="../Manual/dynsections.js"></script>
+<!-- Manually include treeview and search to avoid bloat and to fix
+     paths to the directory Manual . -->
+<!-- $.treeview -->
+<!-- $.search -->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/searchdata.js"></script>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<!-- Manually done below. -->
+<link href="../Manual/stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../Manual/cgal_stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+      }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script src="../Manual/hacks.js" type="text/javascript"></script>
+<script src="modules.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://www.cgal.org/">cgal.org</a></li>
+    <li><a href="../Manual/index.html">Top</a></li>
+    <li><a href="../Manual/general_intro.html">Getting Started</a></li>
+    <li><a href="../Manual/tutorials.html">Tutorials</a></li>
+    <li><a href="../Manual/packages.html">Package Overview</a></li>
+    <li><a href="../Manual/how_to_cite_cgal.html">Acknowledging CGAL</a></li>
+  </ul>
+  <!-- In a package SEARCHENGINE = false, so we cannot use 
+       insertion. That's why we have to do it manually here. Notice
+       that we also take pngs from the Manual. -->
+  <div id="MSearchBox" class="MSearchBoxInactive">
+    <span class="left">
+      <img id="MSearchSelect" src="../Manual/search/mag_sel.png"
+           onmouseover="return searchBox.OnSearchSelectShow()"
+           onmouseout="return searchBox.OnSearchSelectHide()"
+           alt=""/>
+      <input type="text" id="MSearchField" value="Search" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)"
+             onblur="searchBox.OnSearchFieldFocus(false)"
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+    </span><span class="right">
+      <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../Manual/search/close.png" alt=""/></a>
+    </span>
+  </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CGAL 5.1 - IO Streams
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- Code below is usually inserted by doxygen when SEARCHENGINE =
+     true. Notice that the path to the search directory is adjusted to
+     the top-level.-->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../Manual/search",false,'Search');
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0"
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="PageDoc"><div class="header">
+  <div class="headertitle">
+<div class="title">User Manual </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="Chapter_IO_Streams"></a><a class="anchor" id="Chapter_operator_for_IO_streams"></a></p> <div id="autotoc" class="toc"></div> <dl class="section author"><dt>Authors</dt><dd>Andreas Fabri, Geert-Jan Giezeman, Lutz Kettner, and Maxime Gimeno</dd></dl>
+<p>All classes in the <span style="font-variant: small-caps;">CGAL</span> kernel provide input and output operators for IO streams. Classes external to <span style="font-variant: small-caps;">CGAL</span> are also supported, by means of <code><a class="el" href="group__PkgStreamSupportRef.html#ga83bfd4dfd12efab9efbb2a77e8d1f3b4">oformat()</a></code> (Section <a class="el" href="index.html#seciofornoncgaltypes">IO for Non CGAL Types</a>). The basic task of such an operator is to produce a representation of an object that can be written as a sequence of characters on devices as a console, a file, or a pipe. In <span style="font-variant: small-caps;">CGAL</span> we distinguish between a raw ascii, a raw binary and a pretty printing format.</p>
+<div class="fragment"><div class="line"><span class="keyword">enum</span> <a class="code" href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">Mode</a> {ASCII = 0, BINARY, PRETTY};</div>
+</div><!-- fragment --><p>In <code>ASCII</code> mode, objects are written as a set of numbers, e.g. the coordinates of a point or the coefficients of a line, in a machine independent format. In <code>BINARY</code> mode, data are written in a binary format, e.g. a double is represented as a sequence of four byte. The format depends on the machine. The mode <code>PRETTY</code> serves mainly for debugging as the type of the geometric object is written, as well as the data defining the object. For example for a point at the origin with <a class="elRef" href="../Kernel_23/structCGAL_1_1Cartesian.html">Cartesian</a> double coordinates, the output would be <code>PointC2(0.0, 0.0)</code>. At the moment <span style="font-variant: small-caps;">CGAL</span> does not provide input operations for pretty printed data. By default a stream is in <span class="textsc">Ascii</span> mode.</p>
+<p><span style="font-variant: small-caps;">CGAL</span> provides the following functions to modify the mode of an IO stream.</p>
+<div class="fragment"><div class="line"><a class="code" href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">IO::Mode</a> <a class="code" href="group__PkgStreamSupportRef.html#ga5218b20eafd2543d9c70a09c344df8f2">set_mode</a>(std::ios&amp; s, <a class="code" href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">IO::Mode</a> m);</div>
+<div class="line"><a class="code" href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">IO::Mode</a> <a class="code" href="group__PkgStreamSupportRef.html#ga62462cf829e614f6f2cd2cbec9a093d2">set_ascii_mode</a>(std::ios&amp; s);</div>
+<div class="line"><a class="code" href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">IO::Mode</a> <a class="code" href="group__PkgStreamSupportRef.html#gaf8eb8599079dfa427e0f34098bcc790b">set_binary_mode</a>(std::ios&amp; s);</div>
+<div class="line"><a class="code" href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">IO::Mode</a> <a class="code" href="group__PkgStreamSupportRef.html#ga2f2176255429973ea7bf156804a53857">set_pretty_mode</a>(std::ios&amp; s);</div>
+</div><!-- fragment --><p>The following functions allow to test whether a stream is in a certain mode. </p><div class="fragment"><div class="line"><a class="code" href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">IO::Mode</a> <a class="code" href="group__PkgStreamSupportRef.html#gaf0ca61609ab0738a82652842880b2674">get_mode</a>(std::ios&amp; s);</div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="group__PkgStreamSupportRef.html#ga120bfedfbc3d201a73b4824716e83990">is_ascii</a>(std::ios&amp; s);</div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="group__PkgStreamSupportRef.html#ga1e9b270aa13ca55a76209600c2d915fd">is_binary</a>(std::ios&amp; s);</div>
+<div class="line"><span class="keywordtype">bool</span> <a class="code" href="group__PkgStreamSupportRef.html#ga450ead59d56e074d8c3c4f594d2f7d0a">is_pretty</a>(std::ios&amp; s);</div>
+</div><!-- fragment --><h1><a class="anchor" id="IOstreamOutput"></a>
+Output Operator</h1>
+<p><span style="font-variant: small-caps;">CGAL</span> defines output operators for classes that are derived from the class <code>ostream</code>. This allows to write to ostreams as <code>std::cout</code> or <code>std::cerr</code>, as well as to <code>std::ostringstream</code> and <code>std::ofstream</code>. The output operator is defined for all classes in the <span style="font-variant: small-caps;">CGAL</span> <code><a class="elRef" href="../Kernel_23/classKernel.html">Kernel</a></code> and for the class <code><a class="el" href="classCGAL_1_1Color.html">Color</a></code> as well. Let <code>os</code> be an output stream.</p>
+<div class="fragment"><div class="line"><span class="comment">// Inserts object `c` in the stream `os`. Returns `os`.</span></div>
+<div class="line">ostream&amp; <a class="codeRef" href="../Geomview/group__GeomviewOutput.html#ga2ed342fd3fc69dafa1b66ce669d8b679">operator&lt;&lt;</a>(ostream&amp; os, Class c);</div>
+</div><!-- fragment --><h2><a class="anchor" id="IOstreamExample"></a>
+Example</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;CGAL/Cartesian.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;CGAL/Segment_2.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <a class="codeRef" href="../Kernel_23/classCGAL_1_1Point__2.html">CGAL::Point_2&lt; CGAL::Cartesian&lt;double&gt;</a> &gt; Point;</div>
+<div class="line"><span class="keyword">typedef</span> <a class="codeRef" href="../Kernel_23/classCGAL_1_1Segment__2.html">CGAL::Segment_2&lt; CGAL::Cartesian&lt;double&gt;</a> &gt; Segment;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main()</div>
+<div class="line">{</div>
+<div class="line">  Point p(0,1), q(2,2);</div>
+<div class="line">  Segment s(p,q);</div>
+<div class="line"> </div>
+<div class="line">  <a class="code" href="group__PkgStreamSupportRef.html#ga2f2176255429973ea7bf156804a53857">CGAL::set_pretty_mode</a>(std::cout);</div>
+<div class="line">  std::cout &lt;&lt; p &lt;&lt; std::endl &lt;&lt; q &lt;&lt; std::endl;</div>
+<div class="line"> </div>
+<div class="line">  std::ofstream f(<span class="stringliteral">&quot;data.txt&quot;</span>);</div>
+<div class="line">  <a class="code" href="group__PkgStreamSupportRef.html#gaf8eb8599079dfa427e0f34098bcc790b">CGAL::set_binary_mode</a>(f);</div>
+<div class="line">  f &lt;&lt; s &lt;&lt; p ;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> 1;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="IOstreamInput"></a>
+Input Operator</h1>
+<p><span style="font-variant: small-caps;">CGAL</span> defines input operators for classes that are derived from the class <code>istream</code>. This allows to read from istreams as <code>std::cin</code>, as well as from <code>std::istringstream</code> and <code>std::ifstream</code>. The input operator is defined for all classes in the <span style="font-variant: small-caps;">CGAL</span> <code><a class="elRef" href="../Kernel_23/classKernel.html">Kernel</a></code>. Let <code>is</code> be an input stream.</p>
+<div class="fragment"><div class="line"><span class="comment">// Extracts object `c` from the stream `is`. Returns `is`.</span></div>
+<div class="line">istream&amp; <a class="codeRef" href="../Geomview/group__GeomviewInput.html#gab7d081b0676041e705aa32a1dddb449d">operator&gt;&gt;</a>(istream&amp; is, Class c);</div>
+</div><!-- fragment --><h2><a class="anchor" id="IOstreamExample_1"></a>
+Example</h2>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="preprocessor">#include &lt;CGAL/Cartesian.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;CGAL/Segment_2.h&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <a class="codeRef" href="../Kernel_23/classCGAL_1_1Point__2.html">CGAL::Point_2&lt; CGAL::Cartesian&lt;double&gt;</a> &gt; Point;</div>
+<div class="line"><span class="keyword">typedef</span> <a class="codeRef" href="../Kernel_23/classCGAL_1_1Segment__2.html">CGAL::Segment_2&lt; CGAL::Cartesian&lt;double&gt;</a> &gt; Segment;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span></div>
+<div class="line">main()</div>
+<div class="line">{</div>
+<div class="line">  Point p, q;</div>
+<div class="line">  Segment s;</div>
+<div class="line"> </div>
+<div class="line">  <a class="code" href="group__PkgStreamSupportRef.html#ga62462cf829e614f6f2cd2cbec9a093d2">CGAL::set_ascii_mode</a>(std::cin);</div>
+<div class="line">  std::cin &gt;&gt; p &gt;&gt; q;</div>
+<div class="line"> </div>
+<div class="line">  std::ifstream f(<span class="stringliteral">&quot;data.txt&quot;</span>);</div>
+<div class="line">  <a class="code" href="group__PkgStreamSupportRef.html#gaf8eb8599079dfa427e0f34098bcc790b">CGAL::set_binary_mode</a>(f);</div>
+<div class="line">  f &gt;&gt; s &gt;&gt; p;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">return</span> 1;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1><a class="anchor" id="seciofornoncgaltypes"></a>
+IO for Non-CGAL Types</h1>
+<h2><a class="anchor" id="IOstreamUsingOutputFormatting"></a>
+Using Output Formatting</h2>
+<p>To ensure that non-<span style="font-variant: small-caps;">CGAL</span> types are formatted correctly (i.e., respecting <code>IO::Mode</code>), <code><a class="el" href="group__PkgStreamSupportRef.html#ga83bfd4dfd12efab9efbb2a77e8d1f3b4">oformat()</a></code> can be used. For types with a <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code> specialization, the respective output routine of <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code> will be called by <code><a class="el" href="group__PkgStreamSupportRef.html#ga83bfd4dfd12efab9efbb2a77e8d1f3b4">oformat()</a></code>. Otherwise, the stream output operator will be called.</p>
+<h2>Example </h2>
+<div class="fragment"><div class="line">std::cout &lt;&lt; <a class="code" href="group__PkgStreamSupportRef.html#ga83bfd4dfd12efab9efbb2a77e8d1f3b4">CGAL::oformat</a>( myobject );</div>
+</div><!-- fragment --><p>Optional, you can provide a second template parameter <code>F</code> as a formatting tag:</p>
+<h2>Example </h2>
+<div class="fragment"><div class="line">std::cout &lt;&lt; <a class="code" href="group__PkgStreamSupportRef.html#ga83bfd4dfd12efab9efbb2a77e8d1f3b4">CGAL::oformat</a>( myobject, My_formatting_tag() );</div>
+</div><!-- fragment --><p>For a list of formatting tags supported by the type <code>T</code>, please refer to the documentation of the respective type.</p>
+<h2><a class="anchor" id="IOstreamCustomizingOutputFormatting"></a>
+Customizing Output Formatting</h2>
+<p>In some situations, you want to control the output formatting for a type <code>T</code>. For external types (third party libraries etc.), there might be problems if their stream output operator does not respect <code>IO::Mode</code>. The purpose of <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code> is to provide a way to control output formatting that works independently of the object's stream output operator.</p>
+<p>Instead of putting <code>T</code> directly into an output stream, <code>T</code> is wrapped into an output representation <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code>. For convenience, a function <code><a class="el" href="group__PkgStreamSupportRef.html#ga83bfd4dfd12efab9efbb2a77e8d1f3b4">oformat()</a></code> exists which constructs an instance of <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code>.</p>
+<p>If you do not specialize <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code> for <code>T</code>, <code>T</code>'s stream output operator is called from within <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code>, by default. If you want another behaviour for your type <code>T</code>, you have to provide a specialization for that type. Furthermore, you can provide specializations with a second template parameter (a formatting tag). The second template parameter defaults to <code><a class="elRef" href="../STL_Extension/structCGAL_1_1Null__tag.html">Null_tag</a></code> and means <em>default behaviour</em>.</p>
+<p>For example, specializing <code><a class="el" href="classCGAL_1_1Output__rep.html">Output_rep</a></code> for <code>CORE::BigRat</code> (without a formatting tag parameter) could look like this:</p>
+<h2>Example </h2>
+<div class="fragment"><div class="line"><span class="keyword">template</span> &lt;<span class="keyword">class</span> F&gt;</div>
+<div class="line"><span class="keyword">class </span>Output_rep&lt; ::CORE::BigRat, F&gt; {</div>
+<div class="line">  const ::CORE::BigRat&amp; t;</div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line">  Output_rep( const ::CORE::BigRat&amp; tt) : t(tt) {}</div>
+<div class="line"> </div>
+<div class="line">  std::ostream&amp; operator()( std::ostream&amp; out)<span class="keyword"> const </span>{</div>
+<div class="line">    <span class="keywordflow">switch</span> (<a class="code" href="group__PkgStreamSupportRef.html#gaf0ca61609ab0738a82652842880b2674">get_mode</a>(out)) {</div>
+<div class="line">    <span class="keywordflow">case</span> IO::PRETTY:{</div>
+<div class="line">      <span class="keywordflow">if</span>(CGAL_CORE_DENOMINATOR(t) == ::CORE::BigRat(1))</div>
+<div class="line">        <span class="keywordflow">return</span> out &lt;&lt;CGAL_CORE_NUMERATOR(t);</div>
+<div class="line">      <span class="keywordflow">else</span></div>
+<div class="line">        <span class="keywordflow">return</span> out &lt;&lt; CGAL_CORE_NUMERATOR(t)</div>
+<div class="line">                   &lt;&lt; <span class="stringliteral">&quot;/&quot;</span></div>
+<div class="line">                   &lt;&lt; CGAL_CORE_DENOMINATOR(t);</div>
+<div class="line">      <span class="keywordflow">break</span>;</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">default</span>:</div>
+<div class="line">      <span class="keywordflow">return</span> out &lt;&lt; CGAL_CORE_NUMERATOR(t)</div>
+<div class="line">                 &lt;&lt; <span class="stringliteral">&quot;/&quot;</span></div>
+<div class="line">                 &lt;&lt; CGAL_CORE_DENOMINATOR(t);</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line">};</div>
+</div><!-- fragment --><h1><a class="anchor" id="IOstreamColors"></a>
+Colors</h1>
+<p>An object of the class <code><a class="el" href="classCGAL_1_1Color.html">Color</a></code> is a color available for drawing operations in many <span style="font-variant: small-caps;">CGAL</span> output streams.</p>
+<p>Each color is defined by a triple of integers <code>(r,g,b)</code> with 0 \( \le \) r,g,b \( \le \) 255, the so-called <em>rgb-value</em> of the color. There are a 11 predefined <code><a class="el" href="classCGAL_1_1Color.html">Color</a></code> constants available: <code>BLACK</code>, <code>WHITE</code>, <code>GRAY</code>, <code>RED</code>, <code>GREEN</code>, <code>DEEPBLUE</code>, <code>BLUE</code>, <code>PURPLE</code>, <code>VIOLET</code>, <code>ORANGE</code>, and <code>YELLOW</code>.</p>
+<h1><a class="anchor" id="IOstreamStream"></a>
+Stream Support</h1>
+<p>Three classes are provided by <span style="font-variant: small-caps;">CGAL</span> as adaptors to input and output stream iterators. The class <code><a class="el" href="classCGAL_1_1Istream__iterator.html">Istream_iterator</a></code> is an input iterator adaptor and is particularly useful for classes that are similar but not compatible to <code>std::istream</code>. Similarly, the class <code><a class="el" href="classCGAL_1_1Ostream__iterator.html">Ostream_iterator</a></code> is an output iterator adaptor. The class <code><a class="el" href="classCGAL_1_1Verbose__ostream.html">Verbose_ostream</a></code> can be used as an output stream. The stream output operator <code>&lt;&lt;</code> is defined for any type. The class stores in an internal state a stream and whether the output is active or not. If the state is active, the stream output operator <code>&lt;&lt;</code> uses the internal stream to output its argument. If the state is inactive, nothing happens.</p>
+<h1><a class="anchor" id="IOstreamWKT"></a>
+WKT Support</h1>
+<p>WKT stands for <em>Well Known Text</em> and it is a text markup language for representing vector geometry objects on a geographical map. See the <a href="https://en.wikipedia.org/wiki/Well-known_text">wikipedia page</a> for details. CGAL supports a subset of WKT types: point, multipoint, linestring, multilinestring, polygon and multipolygon. Free functions are provided for reading and writing several <span style="font-variant: small-caps;">CGAL</span> types in those WKT types, namely:</p><ul>
+<li><code><a class="elRef" href="../Kernel_23/classCGAL_1_1Point__2.html">CGAL::Point_2</a></code></li>
+<li><code><a class="elRef" href="../Kernel_23/classCGAL_1_1Point__3.html">CGAL::Point_3</a></code></li>
+<li><code><a class="elRef" href="../Polygon/classCGAL_1_1Polygon__with__holes__2.html">CGAL::Polygon_with_holes_2</a></code></li>
+<li>random access range of the above types.</li>
+</ul>
+<h1><a class="anchor" id="IOstreamXML"></a>
+Reading Adhoc XML</h1>
+<p>In case you have to read data in a simple xml file with a simple structure, without existing I/O libraries the <a href="https://www.boost.org/doc/libs/release/libs/property_tree/"><code>boost::property_tree</code></a> comes in handy. The following small example shows how to parse a file looking like this: </p><pre class="fragment">&lt;?xml version="1.0" encoding="UTF-8" standalone="yes"?&gt;
+&lt;PolySet&gt;
+        &lt;Polygon&gt;
+            &lt;Point X="-715.8811978465" Y="-2729.9490000000" Z="-534.9000000000"/&gt;
+            &lt;Point X="-718.1905989232" Y="-2729.9490000000" Z="-538.9000000000"/&gt;
+            &lt;Point X="-722.8094010768" Y="-2729.9490000000" Z="-538.9000000000"/&gt;
+    &lt;/Polygon&gt;
+&lt;/PolySet&gt;
+</pre><p><br  />
+<b>File</b> <a class="el" href="Stream_support_2read_xml_8cpp-example.html">Stream_support/read_xml.cpp</a> </p><div class="fragment"><div class="line"><span class="preprocessor">#include &lt;CGAL/Exact_predicates_inexact_constructions_kernel.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;boost/property_tree/ptree.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;boost/property_tree/xml_parser.hpp&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">typedef</span> <a class="codeRef" href="../Kernel_23/classCGAL_1_1Exact__predicates__inexact__constructions__kernel.html">CGAL::Exact_predicates_inexact_constructions_kernel</a>  K;</div>
+<div class="line"><span class="keyword">typedef</span> K::Point_3                                Point_3;</div>
+<div class="line"> </div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]){</div>
+<div class="line">  std::ifstream in( (argc&gt;1)? argv[1] : <span class="stringliteral">&quot;data/cloud.pol&quot;</span>);</div>
+<div class="line">  boost::property_tree::ptree tree;</div>
+<div class="line">  boost::property_tree::read_xml(in, tree);</div>
+<div class="line"> </div>
+<div class="line">  std::vector&lt;Point_3&gt; points;</div>
+<div class="line"> </div>
+<div class="line">  <span class="keywordflow">for</span>(boost::property_tree::ptree::value_type&amp; node : tree.get_child(<span class="stringliteral">&quot;PolySet.Polygon&quot;</span>)){</div>
+<div class="line">    boost::property_tree::ptree subtree = node.second;</div>
+<div class="line">    <span class="keywordflow">if</span>( node.first == <span class="stringliteral">&quot;Point&quot;</span> ){</div>
+<div class="line">      <span class="keywordflow">for</span>( boost::property_tree::ptree::value_type <span class="keyword">const</span>&amp; v : subtree.get_child( <span class="stringliteral">&quot;&quot;</span> ) ) {</div>
+<div class="line">        std::string label = v.first;</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> ( label == <span class="stringliteral">&quot;&lt;xmlattr&gt;&quot;</span> ) {</div>
+<div class="line">          Point_3 p(subtree.get&lt;<span class="keywordtype">double</span>&gt;( label+<span class="stringliteral">&quot;.X&quot;</span>),</div>
+<div class="line">                    subtree.get&lt;<span class="keywordtype">double</span>&gt;( label+<span class="stringliteral">&quot;.Y&quot;</span>),</div>
+<div class="line">                    subtree.get&lt;<span class="keywordtype">double</span>&gt;( label+<span class="stringliteral">&quot;.Z&quot;</span>));</div>
+<div class="line">          points.push_back(p);</div>
+<div class="line">        }</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line">  }</div>
+<div class="line"> </div>
+<div class="line">  std::cout &lt;&lt; points.size() &lt;&lt; <span class="stringliteral">&quot; points read&quot;</span>&lt;&lt; std::endl;</div>
+<div class="line">  <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --> </div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_gaf0ca61609ab0738a82652842880b2674"><div class="ttname"><a href="group__PkgStreamSupportRef.html#gaf0ca61609ab0738a82652842880b2674">CGAL::get_mode</a></div><div class="ttdeci">IO::Mode get_mode(std::ios &amp;s)</div></div>
+<div class="ttc" id="aclassCGAL_1_1Segment__2_html"><div class="ttname"><a href="../Kernel_23/classCGAL_1_1Segment__2.html">CGAL::Segment_2</a></div></div>
+<div class="ttc" id="aclassCGAL_1_1Exact__predicates__inexact__constructions__kernel_html"><div class="ttname"><a href="../Kernel_23/classCGAL_1_1Exact__predicates__inexact__constructions__kernel.html">CGAL::Exact_predicates_inexact_constructions_kernel</a></div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_ga83bfd4dfd12efab9efbb2a77e8d1f3b4"><div class="ttname"><a href="group__PkgStreamSupportRef.html#ga83bfd4dfd12efab9efbb2a77e8d1f3b4">CGAL::oformat</a></div><div class="ttdeci">Output_rep&lt; T &gt; oformat(const T &amp;t)</div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_gaf8eb8599079dfa427e0f34098bcc790b"><div class="ttname"><a href="group__PkgStreamSupportRef.html#gaf8eb8599079dfa427e0f34098bcc790b">CGAL::set_binary_mode</a></div><div class="ttdeci">IO::Mode set_binary_mode(std::ios &amp;s)</div></div>
+<div class="ttc" id="aclassCGAL_1_1Point__2_html"><div class="ttname"><a href="../Kernel_23/classCGAL_1_1Point__2.html">CGAL::Point_2</a></div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_ga5218b20eafd2543d9c70a09c344df8f2"><div class="ttname"><a href="group__PkgStreamSupportRef.html#ga5218b20eafd2543d9c70a09c344df8f2">CGAL::set_mode</a></div><div class="ttdeci">IO::Mode set_mode(std::ios &amp;s, IO::Mode m)</div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_ga1e9b270aa13ca55a76209600c2d915fd"><div class="ttname"><a href="group__PkgStreamSupportRef.html#ga1e9b270aa13ca55a76209600c2d915fd">CGAL::is_binary</a></div><div class="ttdeci">bool is_binary(std::ios &amp;s)</div></div>
+<div class="ttc" id="agroup__GeomviewOutput_html_ga2ed342fd3fc69dafa1b66ce669d8b679"><div class="ttname"><a href="../Geomview/group__GeomviewOutput.html#ga2ed342fd3fc69dafa1b66ce669d8b679">operator&lt;&lt;</a></div><div class="ttdeci">Geomview_stream &amp; operator&lt;&lt;(Geomview_stream &amp;gs, const Point_3&lt; R &gt; &amp;p)</div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_ga450ead59d56e074d8c3c4f594d2f7d0a"><div class="ttname"><a href="group__PkgStreamSupportRef.html#ga450ead59d56e074d8c3c4f594d2f7d0a">CGAL::is_pretty</a></div><div class="ttdeci">bool is_pretty(std::ios &amp;s)</div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_gac0c882c273b950eb9efca32420e2bef0"><div class="ttname"><a href="group__PkgStreamSupportRef.html#gac0c882c273b950eb9efca32420e2bef0">CGAL::IO::Mode</a></div><div class="ttdeci">Mode</div><div class="ttdef"><b>Definition:</b> io.h:37</div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_ga120bfedfbc3d201a73b4824716e83990"><div class="ttname"><a href="group__PkgStreamSupportRef.html#ga120bfedfbc3d201a73b4824716e83990">CGAL::is_ascii</a></div><div class="ttdeci">bool is_ascii(std::ios &amp;s)</div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_ga62462cf829e614f6f2cd2cbec9a093d2"><div class="ttname"><a href="group__PkgStreamSupportRef.html#ga62462cf829e614f6f2cd2cbec9a093d2">CGAL::set_ascii_mode</a></div><div class="ttdeci">IO::Mode set_ascii_mode(std::ios &amp;s)</div></div>
+<div class="ttc" id="agroup__GeomviewInput_html_gab7d081b0676041e705aa32a1dddb449d"><div class="ttname"><a href="../Geomview/group__GeomviewInput.html#gab7d081b0676041e705aa32a1dddb449d">operator&gt;&gt;</a></div><div class="ttdeci">Geomview_stream &amp; operator&gt;&gt;(Geomview_stream &amp;gs, Point_3&lt; R &gt; &amp;p)</div></div>
+<div class="ttc" id="agroup__PkgStreamSupportRef_html_ga2f2176255429973ea7bf156804a53857"><div class="ttname"><a href="group__PkgStreamSupportRef.html#ga2f2176255429973ea7bf156804a53857">CGAL::set_pretty_mode</a></div><div class="ttdeci">IO::Mode set_pretty_mode(std::ios &amp;s)</div></div>
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- start footer part -->
+<!-- The footer div is not part of the default but we require it to
+move the footer to the bottom of the page. -->
+<div id="footer">
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

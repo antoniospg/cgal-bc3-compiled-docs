@@ -1,0 +1,24 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/AABB_tree
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/AABB_tree.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/doc/AABB_tree/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/doc/AABB_tree/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/doc/AABB_tree
+INPUT += /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/include/
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circulator.tag=../Circulator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Stream_support.tag=../Stream_support
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Box_intersection_d.tag=../Box_intersection_d
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polyhedron.tag=../Polyhedron
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/BGL.tag=../BGL
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Spatial_searching.tag=../Spatial_searching
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/AABB_tree/doc/AABB_tree/fig

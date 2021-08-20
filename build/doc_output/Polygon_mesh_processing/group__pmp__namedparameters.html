@@ -1,0 +1,602 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/png" href="../Manual/g-196x196-doc.png"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CGAL 5.1 - Polygon Mesh Processing: Named Parameters for Polygon Mesh Processing</title>
+<!-- <link href="../Manual/tabs.css" rel="stylesheet" type="text/css"/> -->
+<script type="text/javascript" src="../Manual/jquery.js"></script>
+<script type="text/javascript" src="../Manual/dynsections.js"></script>
+<!-- Manually include treeview and search to avoid bloat and to fix
+     paths to the directory Manual . -->
+<!-- $.treeview -->
+<!-- $.search -->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/searchdata.js"></script>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<!-- Manually done below. -->
+<link href="../Manual/stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../Manual/cgal_stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+      }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script src="../Manual/hacks.js" type="text/javascript"></script>
+<script src="modules.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://www.cgal.org/">cgal.org</a></li>
+    <li><a href="../Manual/index.html">Top</a></li>
+    <li><a href="../Manual/general_intro.html">Getting Started</a></li>
+    <li><a href="../Manual/tutorials.html">Tutorials</a></li>
+    <li><a href="../Manual/packages.html">Package Overview</a></li>
+    <li><a href="../Manual/how_to_cite_cgal.html">Acknowledging CGAL</a></li>
+  </ul>
+  <!-- In a package SEARCHENGINE = false, so we cannot use 
+       insertion. That's why we have to do it manually here. Notice
+       that we also take pngs from the Manual. -->
+  <div id="MSearchBox" class="MSearchBoxInactive">
+    <span class="left">
+      <img id="MSearchSelect" src="../Manual/search/mag_sel.png"
+           onmouseover="return searchBox.OnSearchSelectShow()"
+           onmouseout="return searchBox.OnSearchSelectHide()"
+           alt=""/>
+      <input type="text" id="MSearchField" value="Search" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)"
+             onblur="searchBox.OnSearchFieldFocus(false)"
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+    </span><span class="right">
+      <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../Manual/search/close.png" alt=""/></a>
+    </span>
+  </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CGAL 5.1 - Polygon Mesh Processing
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- Code below is usually inserted by doxygen when SEARCHENGINE =
+     true. Notice that the path to the search directory is adjusted to
+     the top-level.-->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../Manual/search",false,'Search');
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0"
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__pmp__namedparameters.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle">
+<div class="title">Named Parameters for Polygon Mesh Processing<div class="ingroups"><a class="el" href="group__PkgPolygonMeshProcessingRef.html">Polygon Mesh Processing Reference</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+<p>In this package, all functions optional parameters are implemented as BGL optional named parameters (see <a class="elRef" href="../BGL/index.html#BGLNamedParameters">Named Parameters</a> for more information on how to use them). Since the parameters of the various polygon mesh processing functions defined in this package are redundant, their long descriptions are centralized below. The sequence of named parameters starts with <code>CGAL::parameters::</code>. <code><a class="el" href="polygon__mesh__processing_8h.html#aee6e37c8d14cbf0847daa8a6bfeb69e6">CGAL::parameters::all_default()</a></code> can be used to indicate that default values of optional named parameters shall be used.</p>
+<p>In the following, we assume that the following types are provided as template parameters of polygon mesh processing functions and classes. Note that, for some of these functions, the type is more specific: </p><ul>
+<li>
+<code>PolygonMesh</code> is a model of the concept <code><a class="elRef" href="../BGL/classFaceGraph.html">FaceGraph</a></code>. </li>
+<li>
+<code>GeomTraits</code> a geometric traits class in which constructions are performed and predicates evaluated. Everywhere in this package, a <span style="font-variant: small-caps;">CGAL</span> <code><a class="elRef" href="../Kernel_23/classKernel.html">Kernel</a></code> fulfills the requirements. </li>
+</ul>
+<p>The following named parameters, offered by the package PkgBGL (see <a class="elRef" href="../BGL/group__bgl__namedparameters.html">BGL Named Parameters</a>), are used in this package:</p>
+<dl class="params">
+<dt></dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">vertex_point_map </td><td><p class="starttd"><a class="anchor" id="PMP_vertex_point_map"></a>is the property map with the points associated to the vertices of the polygon mesh <code>pmesh</code>.<br  />
+<b>Type:</b> a class model of <code>ReadablePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::vertex_descriptor</code> as key type and <code>GeomTraits::Point_3</code> as value type. <br  />
+<b>Default:</b></p><div class="fragment"><div class="line">boost::get(CGAL::vertex_point, pmesh) </div>
+</div><!-- fragment --> <p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">vertex_index_map </td><td><p class="starttd"><a class="anchor" id="PMP_vertex_index_map"></a>is the property map associating a unique index to each vertex of a polygon mesh, between <code>0</code> and <code>num_vertices(g)-1</code>. If this parameter is not passed, internal machinery will create and initialize a vertex index property map, either using the internal property map if it exists or using an external map. The latter might result in - slightly - worsened performance in case of non-constant complexity for index access.<br  />
+<b>Type:</b> a class model of <code>ReadablePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::vertex_descriptor</code> as key type and the value type </p><div class="fragment"><div class="line"><span class="keyword">typename</span> boost::property_traits&lt;typename boost::property_map&lt;PolygonMesh, CGAL::vertex_index_t&gt;::type&gt;::value_type </div>
+</div><!-- fragment --><p> <b>Default:</b> an initialized vertex index property map </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">face_index_map </td><td><p class="starttd"><a class="anchor" id="PMP_face_index_map"></a>is the property map associating a unique index to each face of a polygon mesh, between <code>0</code> and <code>num_faces(g)-1</code>. If this parameter is not passed, internal machinery will create and initialize a face index property map, either using the internal property map if it exists or using an external map. The latter might result in - slightly - worsened performance in case of non-constant complexity for index access.<br  />
+<b>Type:</b> a class model of <code>ReadablePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::face_descriptor</code> as key type and the value type: </p><div class="fragment"><div class="line"><span class="keyword">typename</span> boost::property_traits&lt;typename boost::property_map&lt;PolygonMesh, CGAL::face_index_t&gt;::type&gt;::value_type </div>
+</div><!-- fragment --><p> <b>Default:</b> an initialized face index property map </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">edge_is_constrained_map </td><td><a class="anchor" id="PMP_edge_is_constrained_map"></a>is the property map containing information about edges of the input polygon mesh being marked or not. In <code><a class="el" href="group__PMP__meshing__grp.html#gad3d03890515ae8103bd32a30a3486412" title="remeshes a triangulated region of a polygon mesh. This operation sequentially performs edge splits,...">isotropic_remeshing()</a></code> and <code><a class="el" href="group__keep__connected__components__grp.html#gabe2052b2281e1e628e68d8fea94be2d9">connected_components()</a></code>, the marked edges are constrained.<br  />
+<b>Type:</b> a class model of <code>ReadWritePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::edge_descriptor</code> as key type and <code>bool</code> as value type. It must be default constructible.<br  />
+<b>Default:</b> a default property map where no edge is constrained  </td></tr>
+</table>
+</dd>
+</dl>
+<p>In addition to these named parameters, this package offers the following named parameters:</p>
+<dl class="params">
+<dt></dt>
+<dd><table class="params">
+<tr>
+<td class="paramname">geom_traits </td><td><p class="starttd"><a class="anchor" id="PMP_geom_traits"></a>is the geometric traits instance used for the mesh processing operation.<br  />
+<b>Type:</b> a Geometric traits class.<br  />
+<b>Default</b>: </p><div class="fragment"><div class="line"><span class="keyword">typename</span> <a class="codeRef" href="../Kernel_23/structCGAL_1_1Kernel__traits.html">CGAL::Kernel_traits</a>&lt;</div>
+<div class="line">       <span class="keyword">typename</span> boost::property_traits&lt;</div>
+<div class="line">         <span class="keyword">typename</span> boost::property_map&lt;PolygonMesh, CGAL::vertex_point_t&gt;::type&gt;::value_type&gt;<a class="codeRef" href="../Kernel_23/classKernel.html">::Kernel</a> </div>
+</div><!-- fragment --> <p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">point_map </td><td><p class="starttd"><a class="anchor" id="PMP_point_map"></a> is the property map containing the points associated to the elements of the point range <code>points</code>.<br  />
+<b>Type:</b> a class model of <code>ReadablePropertyMap</code> with <code>PointRange::iterator::value_type</code> as key type and <code>geom_traits::Point_3</code> as value type. <br  />
+<b>Default value</b>:</p><div class="fragment"><div class="line"><a class="codeRef" href="../Property_map/structCGAL_1_1Identity__property__map.html">CGAL::Identity_property_map&lt;geom_traits::Point_3&gt;</a></div>
+</div><!-- fragment --> <p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">vertex_incident_patches_map </td><td><p class="starttd"><a class="anchor" id="PMP_vertex_incident_patches_map"></a>is the property map containing the surface patches incident to each vertex of the input polygon mesh.<br  />
+<b>Type:</b> a class model of <code>LvaluePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::vertex_descriptor</code> as key type. Its value type must be a container of <code>boost::property_traits&lt;PatchIdMap&gt;::value_type</code> and have a function <code>insert()</code>. A <code>std::set</code> or a <code>boost::unordered_set</code> are recommended, as a patch index may be inserted several times.<br  />
+<b>Default:</b></p><div class="fragment"><div class="line">boost::get(CGAL::vertex_incident_patches_t, pmesh)</div>
+</div><!-- fragment --> <p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">vertex_feature_degree_map </td><td><p class="starttd"><a class="anchor" id="PMP_vertex_feature_degree_map"></a>is the property map containing the number of feature edges being incident to the vertices of the polygon mesh <code>pmesh</code>.<br  />
+<b>Type:</b> a class model of <code>ReadWritePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::vertex_descriptor</code> as key type and <code>int</code> as value type. It must be default constructible.<br  />
+<b>Default:</b></p><div class="fragment"><div class="line">boost::get(CGAL::vertex_feature_degree_t(), pmesh) </div>
+</div><!-- fragment --> <p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">vertex_is_constrained_map </td><td><p class="starttd"><a class="anchor" id="PMP_vertex_is_constrained_map"></a>is the property map containing information about vertices of the input polygon mesh being constrained or not. Constrained vertices may be replaced by new vertices, but the number and location of vertices remain unchanged.<br  />
+<b>Type:</b> a class model of <code>ReadWritePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::vertex_descriptor</code> as key type and <code>bool</code> as value type. It must be default constructible.<br  />
+<b>Default:</b> a default property map where no vertex is constrained is provided. </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">face_patch_map </td><td><p class="starttd"><a class="anchor" id="PMP_face_patch_map"></a>is a property map containing information about faces. It is particularly well-suited for preserving surface patch IDs, or face colors. The edges at the interface between surface patches are treated similarly to the ones of <code>edge_is_constrained_map</code>.<br  />
+<b>Type:</b> a class model of <code>ReadWritePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::face_descriptor</code> as key type and the desired property, model of <code>CopyConstructible</code> as value type.<br  />
+<b>Default:</b> a default property map where each face is associated with the ID of the connected component it belongs to. Connected components are computed with respect to the constrained edges listed in the property map <code>edge_is_constrained_map</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">first_index </td><td><p class="starttd"><a class="anchor" id="PMP_first_index"></a>is the index of the first surface patch.<br  />
+<b>Type:</b> <code>std::size_t</code><br  />
+<b>Default:</b> 1 </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">density_control_factor </td><td><p class="starttd"><a class="anchor" id="PMP_density_control_factor"></a>controls the density of the mesh generated by refinement, with larger values causing denser refinements. The density of vertices in the refined region is this factor times higher than before refinement.<br  />
+<b>Type:</b> floating scalar value<br  />
+<b>Default:</b> <code>CGAL::sqrt(2)</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">fairing_continuity </td><td><p class="starttd"><a class="anchor" id="PMP_fairing_continuity"></a>controls the tangential continuity of the output surface in <code><a class="el" href="group__PMP__meshing__grp.html#gaa091c8368920920eed87784107d68ecf" title="fairs a region on a triangle mesh. The points of the selected vertices are relocated to yield an as-s...">fair()</a></code>. The possible values are 0, 1 and 2, refering to the C<sup>0</sup>, C<sup>1</sup> and C<sup>2</sup> continuity.<br  />
+<b>Type:</b> <code>unsigned</code> <code>int</code> between 0 and 2<br  />
+<b>Default:</b> <code>1</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">sparse_linear_solver </td><td><p class="starttd"><a class="anchor" id="PMP_sparse_linear_solver"></a>is the solver used.<br  />
+<b>Type:</b> a class model of <code><a class="elRef" href="../Solver_interface/classSparseLinearAlgebraWithFactorTraits__d.html">SparseLinearAlgebraWithFactorTraits_d</a></code>.<br  />
+<b>Default:</b> if Eigen 3.2 (or greater) is available and <code>CGAL_EIGEN3_ENABLED</code> is defined, then the following overload of <code>Eigen_solver_traits</code> is provided as default value:<br  />
+in <code><a class="el" href="group__PMP__meshing__grp.html#gaa091c8368920920eed87784107d68ecf" title="fairs a region on a triangle mesh. The points of the selected vertices are relocated to yield an as-s...">fair()</a></code>:<br  />
+</p><div class="fragment"><div class="line"><a class="codeRef" href="../Solver_interface/classCGAL_1_1Eigen__solver__traits.html">CGAL::Eigen_solver_traits&lt;Eigen::SparseLU&lt;CGAL::Eigen_sparse_matrix&lt;double&gt;::EigenType</a>, Eigen::COLAMDOrdering&lt;int&gt; &gt; &gt; </div>
+</div><!-- fragment --><p> in <code><a class="el" href="group__PMP__meshing__grp.html#gaaa083ec78bcecf351e04d1bbf460b4a2">smooth_shape()</a></code>:<br  />
+</p><div class="fragment"><div class="line"><a class="codeRef" href="../Solver_interface/classCGAL_1_1Eigen__solver__traits.html">CGAL::Eigen_solver_traits&lt;Eigen::BiCGSTAB&lt;CGAL::Eigen_sparse_matrix&lt;double&gt;::EigenType</a>, Eigen::IncompleteLUT&lt;double&gt; &gt; &gt; </div>
+</div><!-- fragment --> <p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_iterations </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_iterations"></a>is the number of iterations of the sequence of iterations performed in <code><a class="el" href="group__PMP__meshing__grp.html#gad3d03890515ae8103bd32a30a3486412" title="remeshes a triangulated region of a polygon mesh. This operation sequentially performs edge splits,...">isotropic_remeshing()</a></code>.<br  />
+<b>Type:</b> <code>unsigned</code> <code>int</code> <br  />
+<b>Default:</b> <code>1</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">protect_constraints </td><td><p class="starttd"><a class="anchor" id="PMP_protect_constraints"></a>enables the protection of constraints listed by <a class="el" href="group__pmp__namedparameters.html#PMP_edge_is_constrained_map">edge_is_constrained_map</a> and boundary edges in <code><a class="el" href="group__PMP__meshing__grp.html#gad3d03890515ae8103bd32a30a3486412" title="remeshes a triangulated region of a polygon mesh. This operation sequentially performs edge splits,...">isotropic_remeshing()</a></code>. If <code>true</code>, constraint edges cannot be modified at all during the remeshing process.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">collapse_constraints </td><td><p class="starttd"><a class="anchor" id="PMP_collapse_constraints"></a>enables the collapse of constraints listed by <a class="el" href="group__pmp__namedparameters.html#PMP_edge_is_constrained_map">edge_is_constrained_map</a> and boundary edges in <code><a class="el" href="group__PMP__meshing__grp.html#gad3d03890515ae8103bd32a30a3486412" title="remeshes a triangulated region of a polygon mesh. This operation sequentially performs edge splits,...">isotropic_remeshing()</a></code>. If <code>false</code>, constraint edges cannot be collapsed during the remeshing process.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">relax_constraints </td><td><p class="starttd"><a class="anchor" id="PMP_relax_constraints"></a>enables the tangential relaxation step in <code><a class="el" href="group__PMP__meshing__grp.html#gad3d03890515ae8103bd32a30a3486412" title="remeshes a triangulated region of a polygon mesh. This operation sequentially performs edge splits,...">isotropic_remeshing()</a></code> to be performed on vertices that are endpoints of constraints listed by <a class="el" href="group__pmp__namedparameters.html#PMP_edge_is_constrained_map">edge_is_constrained_map</a>, and boundary edges. The vertices move along the constrained polylines they belong to. Corners (i.e. vertices incident to more than 2 constraints, and vertices listed in <a class="el" href="group__pmp__namedparameters.html#PMP_vertex_is_constrained_map">vertex_is_constrained_map</a>) are not allowed to move at all. If <a class="el" href="group__pmp__namedparameters.html#PMP_protect_constraints">protect_constraints</a> is set to <code>true</code>, this parameter is ignored.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_relaxation_steps </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_relaxation_steps"></a>is the number of iterations of tangential relaxation that are performed at each iteration of <code><a class="el" href="group__PMP__meshing__grp.html#gad3d03890515ae8103bd32a30a3486412" title="remeshes a triangulated region of a polygon mesh. This operation sequentially performs edge splits,...">isotropic_remeshing()</a></code>. A larger number of relaxation steps lead to a more isotropic mesh.<br  />
+<b>Type:</b> <code>unsigned</code> <code>int</code> <br  />
+<b>Default:</b> <code>1</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_delaunay_triangulation </td><td><p class="starttd"><a class="anchor" id="PMP_use_delaunay_triangulation"></a>enables the use of the Delaunay triangulation facet search space for hole filling functions. If no valid triangulation can be found in this search space, the algorithm falls back to the non-Delaunay triangulations search space to find a solution.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_random_uniform_sampling </td><td><p class="starttd"><a class="anchor" id="PMP_use_random_uniform_sampling"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to indicate that the points are picked in a random uniform way.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_grid_sampling </td><td><p class="starttd"><a class="anchor" id="PMP_use_grid_sampling"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to indicate that the points are picked on a grid in each face.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_monte_carlo_sampling </td><td><p class="starttd"><a class="anchor" id="PMP_use_monte_carlo_sampling"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to indicate that the points are picked using a Monte-Carlo approach.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">sample_edges </td><td><p class="starttd"><a class="anchor" id="PMP_sample_edges"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to indicate if a dedicated sampling of edges is done.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">sample_vertices </td><td><p class="starttd"><a class="anchor" id="PMP_sample_vertices"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to indicate that triangle vertices are copied in the output iterator.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">sample_faces </td><td><p class="starttd"><a class="anchor" id="PMP_sample_faces"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to indicate if the interior of faces is considered for the sampling.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_points_on_faces </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_points_on_faces"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to set the number of points picked using the random uniform method on faces.<br  />
+<b>Type:</b> <code>std::size_t</code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_points_on_edges </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_points_on_edges"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to set the number of points picked using the random uniform method on edges.<br  />
+<b>Type:</b> <code>std::size_t</code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_points_per_face </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_points_per_face"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to set the number of points picked per face using the Monte-Carlo method.<br  />
+<b>Type:</b> <code>std::size_t</code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_points_per_edge </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_points_per_edge"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to set the number of points picked per edge using the Monte-Carlo method.<br  />
+<b>Type:</b> <code>std::size_t</code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">grid_spacing </td><td><p class="starttd"><a class="anchor" id="PMP_grid_spacing"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to set the grid spacing when using the grid sampling method.<br  />
+<b>Type:</b> <code>double</code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_points_per_area_unit </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_points_per_area_unit"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to set the number of points per area unit to be picked up in faces for the random uniform sampling and Monte-Carlo methods.<br  />
+<b>Type:</b> <code>double</code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">number_of_points_per_distance_unit </td><td><p class="starttd"><a class="anchor" id="PMP_number_of_points_per_distance_unit"></a>is a parameter used in <code><a class="el" href="group__PMP__distance__grp.html#ga506b11b02a3b108ba97cccbf5d78a513">sample_triangle_mesh()</a></code> to set the number of points per distance unit to be picked up on edges for the random uniform sampling and Monte-Carlo methods.<br  />
+<b>Type:</b> <code>double</code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">do_project </td><td><p class="starttd"><a class="anchor" id="PMP_do_project"></a>is a parameter used in <code><a class="el" href="group__PMP__meshing__grp.html#ga028a80dc84395650f67714fa7618ec53" title="randomly perturbs the locations of vertices of a triangulated surface mesh. By default,...">random_perturbation()</a></code> to set whether vertices are re-projected to the input surface after their geometric perturbation.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">random_seed </td><td><p class="starttd"><a class="anchor" id="PMP_random_seed"></a>is a parameter used in <code><a class="el" href="group__PMP__meshing__grp.html#ga028a80dc84395650f67714fa7618ec53" title="randomly perturbs the locations of vertices of a triangulated surface mesh. By default,...">random_perturbation()</a></code> to choose a seed to initialize the random number generator <code><a class="elRef" href="../Generator/classCGAL_1_1Random.html">CGAL::Random()</a></code>. If this parameter is not provided, the perturbation is not deterministic (i.e. not reproducible from one run to the other).<br  />
+<b>Type:</b> <code>unsigned int</code> <br  />
+<b>Default:</b> the random number generator is initialized with <code><a class="elRef" href="../Generator/classCGAL_1_1Random.html">CGAL::Random()</a></code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">outward_orientation </td><td><p class="starttd"><a class="anchor" id="PMP_outward_orientation"></a>Parameter used in orientation functions to choose between an outward or inward orientation. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code></p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">do_overlap_test_of_bounded_sides </td><td><p class="starttd"><a class="anchor" id="PMP_do_overlap_test_of_bounded_sides"></a>Parameter used in intersection test functions to indicate whether overlapping tests of bounded sides of close meshes are done in addition to surface intersection tests. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">projection_functor </td><td><p class="starttd"><a class="anchor" id="PMP_projection_functor"></a>Parameter used in <code><a class="el" href="group__PMP__meshing__grp.html#gad3d03890515ae8103bd32a30a3486412" title="remeshes a triangulated region of a polygon mesh. This operation sequentially performs edge splits,...">isotropic_remeshing()</a></code> to specify an alternative vertex projection method. <br  />
+<b>Type:</b> Unary function object with vertex descriptor as argument type. <br  />
+<b>Default:</b> A function object projecting vertices on the input surface. </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">apply_per_connected_component </td><td><p class="starttd"><a class="anchor" id="PMP_apply_per_connected_component"></a>Parameter used to indicate whether an algorithm should consider each connected component of a mesh independently.<br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">visitor </td><td><p class="starttd"><a class="anchor" id="PMP_visitor"></a>Parameter used to pass a visitor class to a function. Its type and behavior depend on the visited function. <br  />
+<b>Type:</b> <code>A class</code> <br  />
+<b>Default:</b> Specific to the function visited </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">throw_on_self_intersection </td><td><p class="starttd"><a class="anchor" id="PMP_throw_on_self_intersection"></a>Parameter used in corefinement-related functions to make the functions throw an exception in case some faces involved in the intersection of the input are self-intersecting and make the operation impossible with the current version of the code. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">clip_volume </td><td><p class="starttd"><a class="anchor" id="PMP_clip_volume"></a>Parameter used in <code><a class="el" href="group__PMP__corefinement__grp.html#ga30082762ba2d947cba304e2884d96a99">clip()</a></code> functions to clip a volume rather than a surface. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_compact_clipper </td><td><p class="starttd"><a class="anchor" id="PMP_use_compact_clipper"></a>Parameter used in <code><a class="el" href="group__PMP__corefinement__grp.html#ga30082762ba2d947cba304e2884d96a99">clip()</a></code> functions to indicate whether the boundary of the clipper should be considered as part of the clipping volume or not. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">output_iterator </td><td><p class="starttd"><a class="anchor" id="PMP_output_iterator"></a>Parameter to pass an output iterator. <br  />
+<b>Type</b> : a model of <code>OutputIterator</code> <br  />
+<b>Default</b> : <code>#<a class="elRef" href="../STL_Extension/structCGAL_1_1Emptyset__iterator.html">CGAL::Emptyset_iterator</a></code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">erase_all_duplicates </td><td><p class="starttd"><a class="anchor" id="PMP_erase_all_duplicates"></a>Parameter used in the function <code><a class="el" href="group__PMP__repairing__grp.html#ga8fbe2f858697ae665b8e44fad31bae6b">merge_duplicate_polygons_in_polygon_soup()</a></code> to indicate, when multiple faces are duplicates, whether all the duplicate faces should be removed or if one (arbitrarily chosen) face should be kept. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">require_same_orientation </td><td><p class="starttd"><a class="anchor" id="PMP_require_same_orientation"></a>Parameter used in the function <code><a class="el" href="group__PMP__repairing__grp.html#ga8fbe2f858697ae665b8e44fad31bae6b">merge_duplicate_polygons_in_polygon_soup()</a></code> to indicate if orientation should matter when determining whether two faces are duplicates. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">snapping_tolerance </td><td><p class="starttd"><a class="anchor" id="PMP_snapping_tolerance"></a>Parameter used in the function <code><a class="el" href="group__PMP__locate__grp.html#ga5968eb76dd201aefad0d61d7308cec14" title="Given a point query and a face fd of a triangulated surface mesh, returns this location as a location...">locate_in_face()</a></code> to to snap barycentric coordinates. Depending on the geometric traits used, the computation of the barycentric coordinates might be an inexact construction, thus leading to sometimes surprising values (e.g. a triplet <code>[0.5, 0.5, -1-e17]</code> for a point at the middle of an edge). The coordinates will be snapped towards <code>0</code> and <code>1</code> if the difference is smaller than the tolerance value, while still ensuring that the total sum of the coordinates is <code>1</code>. <br  />
+<b>Type:</b> <code><a class="elRef" href="../Kernel_23/classKernel.html#a55e83f5a9f8ca43588b02ae8256a8fbd">Kernel::FT</a></code> <br  />
+<b>Default:</b> <code>0</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_angle_smoothing </td><td><p class="starttd"><a class="anchor" id="PMP_use_angle_smoothing"></a>Parameter used in the function <code><a class="el" href="group__PMP__meshing__grp.html#gaa0551d546f6ab2cd9402bea12d8332a3" title="smoothes a triangulated region of a polygon mesh.">smooth_mesh()</a></code> to indicate if angle-based smoothing should be used. When this type of smoothing is used, the algorithm attempts to equalize angles incident to each vertex. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_area_smoothing </td><td><p class="starttd"><a class="anchor" id="PMP_use_area_smoothing"></a>Parameter used in the function <code><a class="el" href="group__PMP__meshing__grp.html#gaa0551d546f6ab2cd9402bea12d8332a3" title="smoothes a triangulated region of a polygon mesh.">smooth_mesh()</a></code> to indicate if area-based smoothing should be used. When this type of smoothing is used, the algorithm attempts to equalize the areas of the triangles incident to each vertex. Since this can create elongated triangles, a second phase uses Delaunay-based flips to recover good shapes, unless specified otherwise (see below). <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">do_orientation_tests </td><td><p class="starttd"><a class="anchor" id="PMP_do_orientation_tests"></a>Parameter used in <code><a class="el" href="group__PMP__orientation__grp.html#ga133e58280959c152770525f27bb42b91">volume_connected_components()</a></code> to indicate if a surface orientation test must be performed to decide whether a surface connected component belong to a volume or not. <br  />
+<b>Type</b> : <code>bool</code> <br  />
+<b>Default</b> value is <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">do_self_intersection_tests </td><td><p class="starttd"><a class="anchor" id="PMP_do_self_intersection_tests"></a>Parameter used in <code><a class="el" href="group__PMP__orientation__grp.html#ga133e58280959c152770525f27bb42b91">volume_connected_components()</a></code> to indicate if the input triangle mesh might contains self-intersections that must be taken into account while detecting volume connected components. <br  />
+<b>Type</b> : <code>bool</code> <br  />
+<b>Default</b> value is <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">error_codes </td><td><p class="starttd"><a class="anchor" id="PMP_error_codes"></a>a reference to an object that must be a model of the <code>BackInsertionSequence</code> concept, holding the classification of a volume connected component identified by its id. The size of the container is exactly the number of volume connected components and the object at position <code>k</code> in the container corresponds to the classification of the volume connected component assigned the id <code>k</code>. <br  />
+<b>Type:</b> a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) over an object of type <code>container&lt;Volume_error_code&gt;</code> <br  />
+<b>Default:</b> None </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">face_connected_component_map </td><td><p class="starttd"><a class="anchor" id="PMP_face_connected_component_map"></a>a property map that will contain for each face the id of its surface connected component in the range <code>[0, number of connected components - 1[</code>. <br  />
+<b>Type:</b> a class model of <code>WritablePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::face_descriptor</code> as key type and <code>std::size_t</code> as value type<br  />
+<b>Default:</b> None </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">volume_inclusions </td><td><p class="starttd"><a class="anchor" id="PMP_volume_inclusions"></a>a reference to a container holding a container of id of surface connected components. The container must be a model of the <code>BackInsertionSequence</code> concept, with a value type being a model of <code>BackInsertionSequence</code> of ids, both types having the functions <code>reserve()</code> and <code>push_back()</code>. The size of the container is exactly the number of surface connected components of the triangle mesh considered The container at position <code>k</code> contains the id of each surface connected components that is the first intersected by a ray with source on the surface connected component <code>k</code> and directed outside the finite volume enclosed by the surface connected component <code>k</code>. <br  />
+<b>Type:</b> a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) over an object of type <code>container&lt; container&lt;std::size_t&gt; &gt;</code> <br  />
+<b>Default:</b> None </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname"><a class="el" href="group__pmp__namedparameters.html#PMP_connected_component_id_to_volume_id">connected_component_id_to_volume_id</a></td><td><p class="starttd"><a class="anchor" id="PMP_connected_component_id_to_volume_id"></a>a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) containing a reference to an object that must be a model of the <code>BackInsertionSequence</code> concept, with a value_type being <code>std::size_t</code>. The size of the container is exactly the number of connected components. For each connected component identified using its id <code>ccid</code>, the id of the volume it contributes to is the value at the position <code>ccid</code> in the parameter container. <br  />
+<b>Type:</b> a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) over an object of type <code>container&lt;std::size_t&gt;</code> <br  />
+<b>Default:</b> None </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname"><a class="el" href="group__pmp__namedparameters.html#PMP_nesting_levels">nesting_levels</a></td><td><p class="starttd"><a class="anchor" id="PMP_nesting_levels"></a>a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) containing a reference to an object that must be a model of the <code>BackInsertionSequence</code> concept, with a value_type being <code>std::size_t</code>. The size of the container is exactly the number of connected components. For each connected component identified using its id <code>ccid</code>, the container contains the number of connected components containing on their bounded side this component. <br  />
+<b>Type:</b> a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) over an object of type <code>container&lt;std::size_t&gt;</code> <br  />
+<b>Default:</b> None </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname"><a class="el" href="group__pmp__namedparameters.html#PMP_is_cc_outward_oriented">is_cc_outward_oriented</a></td><td><p class="starttd"><a class="anchor" id="PMP_is_cc_outward_oriented"></a>a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) containing a reference to an object that must be a model of the <code>BackInsertionSequence</code> concept, with a value_type being <code>bool</code>. The size of the container is exactly the number of connected components. For each connected component identified using its id <code>ccid</code>, the output of <code>is_outward_oriented</code> called on the submesh corresponding to this connected component is the value at the position <code>ccid</code> in the parameter container. <br  />
+<b>Type:</b> a <code>reference_wrapper</code> (either from <code>boost</code> or the standard library) over an object of type <code>container&lt;bool&gt;</code> <br  />
+<b>Default:</b> None </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname"><a class="el" href="group__pmp__namedparameters.html#PMP_intersecting_volume_pairs_output_iterator">intersecting_volume_pairs_output_iterator</a></td><td><p class="starttd"><a class="anchor" id="PMP_intersecting_volume_pairs_output_iterator"></a>Output iterator into which pairs of ids (id must be convertible to <code>std::size_t</code>) can be put. Each pair of connected components intersecting will be reported using their ids. If <code>do_self_intersection_tests</code> named parameter is set to <code>false</code>, nothing will be reported. <b>Type</b> : a model of <code>OutputIterator</code> <br  />
+<b>Default</b> : <code>#<a class="elRef" href="../STL_Extension/structCGAL_1_1Emptyset__iterator.html">CGAL::Emptyset_iterator</a></code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_Delaunay_flips </td><td><p class="starttd"><a class="anchor" id="PMP_use_Delaunay_flips"></a>Parameter used in the function <code><a class="el" href="group__PMP__meshing__grp.html#gaa0551d546f6ab2cd9402bea12d8332a3" title="smoothes a triangulated region of a polygon mesh.">smooth_mesh()</a></code> to indicate if Delaunay-based flips should be used after area-based smoothing has been performed. A user wishing to preserve combinatorial information can set this parameter to <code>false</code>, but the mesh might have elongated elements. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">use_safety_constraints </td><td><p class="starttd"><a class="anchor" id="PMP_use_safety_constraints"></a>Parameter used in the function <code><a class="el" href="group__PMP__meshing__grp.html#gaa0551d546f6ab2cd9402bea12d8332a3" title="smoothes a triangulated region of a polygon mesh.">smooth_mesh()</a></code> to indicate if some sanity checks should be used to decide if the move of a vertex should be applied or rejected. These sanity checks consists of checking that no face incident to the vertex becomes inverted and that the minimum angle of the incident faces is not decreased by the move. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>true</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">face_size_map </td><td><p class="starttd"><a class="anchor" id="PMP_face_size_map"></a>Parameter used in the functions <code><a class="el" href="group__keep__connected__components__grp.html#ga48e7b3e6922ee78cf8ce801e3e325d9a">keep_large_connected_components()</a></code> and <code><a class="el" href="group__keep__connected__components__grp.html#ga68c6c29dfc6a26a6a2f8befe6944f19d">keep_largest_connected_components()</a></code> to pass a property map that gives the size of a face when evaluating the size of a connected component (which is defined as the sum of the sizes of its faces). <br  />
+<b>Type:</b> a class model of <code>ReadablePropertyMap</code> with <code>boost::graph_traits&lt;PolygonMesh&gt;::face_descriptor</code> as key type and a value type supporting construction from <code>0</code>, <code><a class="elRef" href="../Surface_mesh/group__PkgSurface__mesh.html#gace96325c1be2a053bba0afd0fae128c5">operator+=()</a></code>, and comparison operators. <br  />
+<b>Default:</b> <code><a class="elRef" href="../Property_map/structCGAL_1_1Constant__property__map.html">CGAL::Constant_property_map</a>&lt;face_descriptor, std::size_t&gt;</code> with value <code>1</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">area_threshold </td><td><p class="starttd"><a class="anchor" id="PMP_area_threshold"></a>Parameter used in the function <code><a class="el" href="group__PMP__repairing__grp.html#gac544fcaba1d59d330a3a1536caff392a">remove_connected_components_of_negligible_size()</a></code> to pass a threshold value such that all connected components with an area smaller than this value are removed from the mesh. <br  />
+<b>Type:</b> <code><a class="elRef" href="../Kernel_23/classKernel.html#a55e83f5a9f8ca43588b02ae8256a8fbd">Kernel::FT</a></code> <br  />
+<b>Default:</b> The square of one percent of the length of the diagonal of the bounding box of the mesh. </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">volume_threshold </td><td><p class="starttd"><a class="anchor" id="PMP_volume_threshold"></a>Parameter used in the function <code><a class="el" href="group__PMP__repairing__grp.html#gac544fcaba1d59d330a3a1536caff392a">remove_connected_components_of_negligible_size()</a></code> to pass a threshold value such that all (closed) connected components with a volume smaller than this value are removed from the mesh. <br  />
+<b>Type:</b> <code><a class="elRef" href="../Kernel_23/classKernel.html#a55e83f5a9f8ca43588b02ae8256a8fbd">Kernel::FT</a></code> <br  />
+<b>Default:</b> The third power of one percent of the length of the diagonal of the bounding box of the mesh. </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">dry_run </td><td><p class="starttd"><a class="anchor" id="PMP_dry_run"></a>Parameter that tells a function not to alter the input, but rather to only return the expected result. It is for example used in the fucntion <code><a class="el" href="group__keep__connected__components__grp.html#ga48e7b3e6922ee78cf8ce801e3e325d9a">keep_large_connected_components()</a></code>. <br  />
+<b>Type:</b> <code>bool</code> <br  />
+<b>Default:</b> <code>false</code> </p>
+<p class="endtd"></p>
+</td></tr>
+<tr>
+<td class="paramname">maximum_number_of_faces </td><td><p class="starttd"><a class="anchor" id="PMP_maximum_number_of_faces"></a> Parameter that specifies the maximum number of faces that a component of a mesh can have to be considered reversible <br  />
+If it is left default, then it is ignored and all components are considered reversible. <br  />
+<b>Type:</b> <code>size_type</code> <br  />
+<b>Default:</b> 0 </p>
+<p class="endtd"></p>
+</td></tr>
+</table>
+</dd>
+</dl>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astructCGAL_1_1Identity__property__map_html"><div class="ttname"><a href="../Property_map/structCGAL_1_1Identity__property__map.html">CGAL::Identity_property_map</a></div></div>
+<div class="ttc" id="aclassKernel_html"><div class="ttname"><a href="../Kernel_23/classKernel.html">Kernel</a></div></div>
+<div class="ttc" id="aclassCGAL_1_1Eigen__solver__traits_html"><div class="ttname"><a href="../Solver_interface/classCGAL_1_1Eigen__solver__traits.html">CGAL::Eigen_solver_traits</a></div></div>
+<div class="ttc" id="astructCGAL_1_1Kernel__traits_html"><div class="ttname"><a href="../Kernel_23/structCGAL_1_1Kernel__traits.html">CGAL::Kernel_traits</a></div></div>
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- start footer part -->
+<!-- The footer div is not part of the default but we require it to
+move the footer to the bottom of the page. -->
+<div id="footer">
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

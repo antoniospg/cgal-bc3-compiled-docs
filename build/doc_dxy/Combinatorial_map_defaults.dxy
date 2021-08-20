@@ -1,0 +1,23 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Combinatorial_map
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Combinatorial_map/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Combinatorial_map.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Combinatorial_map/doc/Combinatorial_map/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Combinatorial_map/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Combinatorial_map/doc/Combinatorial_map/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Combinatorial_map/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Combinatorial_map/doc/Combinatorial_map
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circulator.tag=../Circulator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Stream_support.tag=../Stream_support
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/HalfedgeDS.tag=../HalfedgeDS
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polyhedron.tag=../Polyhedron
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Linear_cell_complex.tag=../Linear_cell_complex
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Generalized_map.tag=../Generalized_map
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Combinatorial_map/doc/Combinatorial_map/fig

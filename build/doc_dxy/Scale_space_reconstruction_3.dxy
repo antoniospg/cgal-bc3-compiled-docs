@@ -1,0 +1,6 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Scale_space_reconstruction_3_defaults.dxy
+
+PROJECT_NAME		 = "CGAL 5.1 - Scale-Space Surface Reconstruction"
+EXTRACT_ALL		=  NO
+HIDE_UNDOC_CLASSES	=  YES
+HIDE_UNDOC_MEMBERS	=  YES

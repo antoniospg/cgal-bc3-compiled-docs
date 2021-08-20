@@ -1,0 +1,19 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/STL_Extension
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/STL_Extension/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/STL_Extension.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/STL_Extension/doc/STL_Extension/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/STL_Extension/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/STL_Extension/doc/STL_Extension/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/STL_Extension/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/STL_Extension/doc/STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circulator.tag=../Circulator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Number_types.tag=../Number_types
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Miscellany.tag=../Miscellany
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh.tag=../Surface_mesh
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/STL_Extension/doc/STL_Extension/fig

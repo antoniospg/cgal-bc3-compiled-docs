@@ -1,0 +1,264 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/png" href="../Manual/g-196x196-doc.png"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CGAL 5.1 - Point Set Processing: Point Set Processing Reference</title>
+<!-- <link href="../Manual/tabs.css" rel="stylesheet" type="text/css"/> -->
+<script type="text/javascript" src="../Manual/jquery.js"></script>
+<script type="text/javascript" src="../Manual/dynsections.js"></script>
+<!-- Manually include treeview and search to avoid bloat and to fix
+     paths to the directory Manual . -->
+<!-- $.treeview -->
+<!-- $.search -->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/searchdata.js"></script>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<!-- Manually done below. -->
+<link href="../Manual/stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../Manual/cgal_stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+      }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script src="../Manual/hacks.js" type="text/javascript"></script>
+<script src="modules.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://www.cgal.org/">cgal.org</a></li>
+    <li><a href="../Manual/index.html">Top</a></li>
+    <li><a href="../Manual/general_intro.html">Getting Started</a></li>
+    <li><a href="../Manual/tutorials.html">Tutorials</a></li>
+    <li><a href="../Manual/packages.html">Package Overview</a></li>
+    <li><a href="../Manual/how_to_cite_cgal.html">Acknowledging CGAL</a></li>
+  </ul>
+  <!-- In a package SEARCHENGINE = false, so we cannot use 
+       insertion. That's why we have to do it manually here. Notice
+       that we also take pngs from the Manual. -->
+  <div id="MSearchBox" class="MSearchBoxInactive">
+    <span class="left">
+      <img id="MSearchSelect" src="../Manual/search/mag_sel.png"
+           onmouseover="return searchBox.OnSearchSelectShow()"
+           onmouseout="return searchBox.OnSearchSelectHide()"
+           alt=""/>
+      <input type="text" id="MSearchField" value="Search" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)"
+             onblur="searchBox.OnSearchFieldFocus(false)"
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+    </span><span class="right">
+      <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../Manual/search/close.png" alt=""/></a>
+    </span>
+  </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CGAL 5.1 - Point Set Processing
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- Code below is usually inserted by doxygen when SEARCHENGINE =
+     true. Notice that the path to the search directory is adjusted to
+     the top-level.-->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../Manual/search",false,'Search');
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0"
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('group__PkgPointSetProcessing3Ref.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#groups">Modules</a>  </div>
+  <div class="headertitle">
+<div class="title">Point Set Processing Reference</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a name="details" id="details"></a><h2 class="groupheader"> </h2>
+<div class="PkgImage"> <div class="image">
+<img src="point_set_processing_detail.png" alt=""/>
+</div>
+ </div> <div class="PkgSummary"> <div class="PkgAuthors">Pierre Alliez, Simon Giraudot, Clément Jamin, Florent Lafarge, Quentin Mérigot, Jocelyn Meyron, Laurent Saboret, Nader Salman, Shihao Wu, Necip Fazil Yildiran</div> <div class="PkgDescription">This <span style="font-variant: small-caps;">CGAL</span> component implements methods to analyze and process unorganized point sets. The input is an unorganized point set, possibly with normal attributes (unoriented or oriented). The point set can be analyzed to measure its average spacing, and processed through functions devoted to the simplification, outlier removal, smoothing, normal estimation, normal orientation, feature edges estimation and registration.</div> <div class="PkgManuals"></div> </div> <div class="PkgShortInfo"> <b>Introduced in:</b> <span style="font-variant: small-caps;">CGAL</span> 3.5<br  />
+ <b>Depends on:</b> PkgSolverInterface <br  />
+ <b>BibTeX:</b> <a href="../Manual/how_to_cite_cgal.html#cgal:ass-psp-21b">cgal:ass-psp-21b</a><br  />
+ <b>License:</b> GPL <br  />
+ <b>Windows Demo:</b> <a href="https://www.cgal.org/demo/5.1/polyhedron_3.zip">Polyhedron demo</a><br  />
+<b>Common Demo Dlls:</b> <a href="https://www.cgal.org/demo/5.1/CGAL-demoDLLs.zip">dlls</a><br  />
+ </div> <h2 class="groupheader">Classified Reference Pages</h2> <h2>Algorithms</h2>
+<ul>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gaa74cb0739e0d74f495d3a65e7e1b4e7e">CGAL::compute_average_spacing()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga7a0e851fd41f7ea2c640eff9f5a3fc2b">CGAL::estimate_global_k_neighbor_scale()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga8b8e7e8e694d746cfa0bca11f87fb527">CGAL::estimate_global_range_scale()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gab8b8b073db1b79e1cc482114044fd76c">CGAL::estimate_local_k_neighbor_scales()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gacc9353050636f6c746585639a282a7b8">CGAL::estimate_local_range_scales()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gab81663c718960780ddb176aad845e8cd">CGAL::OpenGR::compute_registration_transformation()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga6194087f512e4e23dd945a9364d0931d">CGAL::OpenGR::register_point_sets()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gaf75af5c1634fa83fa05a33e95570b127">CGAL::pointmatcher::compute_registration_transformation()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gaa222278e20a3ce41930d37326cd54ef9">CGAL::pointmatcher::register_point_sets()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gafd0b5a21ec5042e4bca09cb43f1847f9">CGAL::remove_outliers()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gac7c81cc8a2986e3972e86612e4f847a1">CGAL::grid_simplify_point_set()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga4be2d94f1791d24b8ba0107bc33ad6dc">CGAL::random_simplify_point_set()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga149ceecc075a180669bde3e65742fdf5">CGAL::hierarchy_simplify_point_set()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gacbddbfa4e9c4c32c42d981a6a050d8cd">CGAL::wlop_simplify_and_regularize_point_set()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga549402c0a8a8b6b71875181e93961521">CGAL::jet_smooth_point_set()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga4f82723e2f0bb33f3677e29e0208a256">CGAL::bilateral_smooth_point_set()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga0cd0f87de690d4edf82740e856efa491">CGAL::jet_estimate_normals()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga8c642da96a025ab32445aeb6cc219b0b">CGAL::pca_estimate_normals()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga50c98d5c5ae5535bce6f32eddbd03f33">CGAL::mst_orient_normals()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga128b4cd2445490a0f1c3f573216ac477">CGAL::edge_aware_upsample_point_set()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga4090777b535d58b5acf30ab7fb7cf488">CGAL::compute_vcm()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#ga020a2ee77849fc70cbbee93358222dff">CGAL::vcm_estimate_normals()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gac57ce53e3249a66e4c19e85f439ff01e">CGAL::vcm_is_on_feature_edge()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3Algorithms.html#gaebbc04909dfd575a94f932c8d3bacdce">CGAL::structure_point_set()</a></code></li>
+</ul>
+<h2>IO (XYZ/OFF Formats)</h2>
+<ul>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IO.html#ga1d0f58874ed1ddb2b00721f15ba362a9">CGAL::read_off_points()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IO.html#ga2e8d677def85c5582ba1f01eda030628">CGAL::read_xyz_points()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IO.html#ga5d99add98e7411c7d5bd27562d48603f">CGAL::write_off_points()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IO.html#ga63d1f8f5933d843d8a179a1be4b0dd8f">CGAL::write_xyz_points()</a></code></li>
+</ul>
+<h2>IO (PLY Format)</h2>
+<ul>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOPly.html#ga1cff0be3f76b7e5f70dbd4320b06394a">CGAL::read_ply_points()</a></code></li>
+<li><code><a class="el" href="namespaceCGAL.html#a483fe42bbefcafce8a5d6194573a2715">CGAL::read_ply_points_with_properties()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOPly.html#ga10908ae5e7b2d585bc973fe14a694a25">CGAL::write_ply_points()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOPly.html#gaa9c84f9edcad73c46d9838618de9878e">CGAL::write_ply_points_with_properties()</a></code></li>
+<li><code><a class="el" href="structCGAL_1_1PLY__property.html">CGAL::PLY_property</a>&lt;T&gt;</code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOPly.html#gae8b88aed53f6aad119c4eae3d5ae48bf">CGAL::make_ply_point_reader()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOPly.html#ga46a5d87f82f7c1f4a210d5e494d72c55">CGAL::make_ply_point_writer()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOPly.html#gaf72517e2162e7a558dfc20741dc6244a">CGAL::make_ply_normal_reader()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOPly.html#ga29439e01c9a1e3e5f4898bd81ccdb689">CGAL::make_ply_normal_writer()</a></code></li>
+</ul>
+<h2>IO (LAS Format)</h2>
+<ul>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOLas.html#ga638b30c7234beb453a3e3fd31dad267d">CGAL::read_las_points()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOLas.html#gaf02431d387cc9b00ed932a41b164d389">CGAL::read_las_points_with_properties()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOLas.html#gaa96a32cc42a0706e2f7dc74b2fc8be72">CGAL::write_las_points()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOLas.html#gab458d5161d933b236ac42b03366ffeb7">CGAL::write_las_points_with_properties()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOLas.html#ga215c73a41ddab1c7bf1d35b23786a9ef">CGAL::make_las_point_reader()</a></code></li>
+<li><code><a class="el" href="group__PkgPointSetProcessing3IOLas.html#ga83b0dddee3caa3b31851511e54805ae9">CGAL::make_las_point_writer()</a></code> </li>
+</ul>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="groups"></a>
+Modules</h2></td></tr>
+<tr class="memitem:group__psp__namedparameters"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__psp__namedparameters.html">Named Parameters for Point Set Processing</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__PkgPointSetProcessing3Algorithms"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__PkgPointSetProcessing3Algorithms.html">Algorithms</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__PkgPointSetProcessing3IO"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__PkgPointSetProcessing3IO.html">IO (XYZ/OFF Formats)</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__PkgPointSetProcessing3IOPly"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__PkgPointSetProcessing3IOPly.html">IO (PLY Format)</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:group__PkgPointSetProcessing3IOLas"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__PkgPointSetProcessing3IOLas.html">IO (LAS Format)</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- start footer part -->
+<!-- The footer div is not part of the default but we require it to
+move the footer to the bottom of the page. -->
+<div id="footer">
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

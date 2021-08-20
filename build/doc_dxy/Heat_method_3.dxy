@@ -1,0 +1,2 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Heat_method_3_defaults.dxy
+PROJECT_NAME = "CGAL 5.1 - The Heat Method"

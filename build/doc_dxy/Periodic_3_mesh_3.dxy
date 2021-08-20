@@ -1,0 +1,17 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Periodic_3_mesh_3_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - 3D Periodic Mesh Generation"
+EXAMPLE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/include/
+EXTRACT_ALL                =  false
+HIDE_UNDOC_CLASSES         =  true
+WARN_IF_UNDOCUMENTED       =  false
+HTML_EXTRA_FILES           =  /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_banner.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_copies.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_implicit_domain.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_implicit_spheres.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_implicit_interior_and_exterior.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_implicit_multi_domain.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_implicit_optimizers.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_implicit_protection.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Periodic_3_mesh_3/doc/Periodic_3_mesh_3/fig/periodic_implicit_protection_bis.jpg \
+

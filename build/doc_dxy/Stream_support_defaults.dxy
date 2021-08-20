@@ -1,0 +1,20 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Stream_support
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Stream_support/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Stream_support.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Stream_support/doc/Stream_support/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Stream_support/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Stream_support/doc/Stream_support/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Stream_support/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Stream_support/doc/Stream_support
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Geomview.tag=../Geomview
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh.tag=../Surface_mesh
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polyhedron.tag=../Polyhedron
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polygon.tag=../Polygon
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Stream_support/doc/Stream_support/fig

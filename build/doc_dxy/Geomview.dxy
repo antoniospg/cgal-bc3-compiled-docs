@@ -1,0 +1,5 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Geomview_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - Geomview"
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Geomview/demo
+

@@ -1,0 +1,33 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Polygon_mesh_processing_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - Polygon Mesh Processing"
+# custom options for this package
+EXTRACT_ALL                =  false
+HIDE_UNDOC_CLASSES         =  true
+WARN_IF_UNDOCUMENTED       =  false
+
+# macros to be used inside the code
+ALIASES += "cgalNamedParamsBegin=<dl class=\"params\"><dt>Named Parameters</dt><dd> <table class=\"params\">"
+ALIASES += "cgalNamedParamsEnd=</table> </dd> </dl>"
+ALIASES += "cgalParamBegin{1}=<tr><td class=\"paramname\">\ref PMP_\1 \"\1\"</td><td>"
+ALIASES += "cgalParamEnd=</td></tr>"
+ALIASES += "cgalDescribePolylineType=A polyline is defined as a sequence of points, each pair of contiguous points defines a segment of the polyline. If the first and last points of the polyline are identical, the polyline is closed."
+
+#macros for NamedParameters.txt
+ALIASES += "cgalNPTableBegin=<dl class=\"params\"><dt></dt><dd> <table class=\"params\">"
+ALIASES += "cgalNPTableEnd=</table> </dd> </dl>"
+ALIASES += "cgalNPBegin{1}=<tr><td class=\"paramname\">\1 </td><td>"
+ALIASES += "cgalNPEnd=</td></tr>"
+
+EXAMPLE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Poisson_surface_reconstruction_3/examples
+
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+EXPAND_AS_DEFINED      = CGAL_PMP_NP_TEMPLATE_PARAMETERS \
+                        CGAL_PMP_NP_CLASS
+EXCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon_mesh_processing/include//CGAL/Polygon_mesh_processing/internal
+EXCLUDE_SYMBOLS += experimental
+
+HTML_EXTRA_FILES           = /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon_mesh_processing/doc/Polygon_mesh_processing/fig/selfintersections.jpg \
+                             /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon_mesh_processing/doc/Polygon_mesh_processing/fig/mesh_smoothing.png \
+                             /home/antonio/Documentos/gsoc/cgal-public-dev/Polygon_mesh_processing/doc/Polygon_mesh_processing/fig/shape_smoothing.png

@@ -1,1 +1,0 @@
-# cgal-bc3-compiled-docs

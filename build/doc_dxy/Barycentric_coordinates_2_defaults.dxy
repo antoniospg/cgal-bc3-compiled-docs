@@ -1,0 +1,24 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Barycentric_coordinates_2
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Barycentric_coordinates_2.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/doc/Barycentric_coordinates_2/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/doc/Barycentric_coordinates_2/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/doc/Barycentric_coordinates_2
+INPUT += /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/include/
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Mesh_2.tag=../Mesh_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polygon.tag=../Polygon
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Generator.tag=../Generator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Convex_hull_2.tag=../Convex_hull_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Interpolation.tag=../Interpolation
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Triangulation_2.tag=../Triangulation_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Barycentric_coordinates_2/doc/Barycentric_coordinates_2/fig

@@ -1,0 +1,9 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Apollonius_graph_2_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - 2D Apollonius Graphs (Delaunay Graphs of Disks)"
+EXCLUDE_SYMBOLS +=  Agvb
+
+            
+
+
+

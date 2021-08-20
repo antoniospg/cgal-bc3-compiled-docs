@@ -1,0 +1,20 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/GraphicsView
+HTML_OUTPUT = .
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/GraphicsView.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/GraphicsView/doc/GraphicsView/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/GraphicsView/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/GraphicsView/doc/GraphicsView/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/GraphicsView/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/GraphicsView/doc/GraphicsView
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circulator.tag=../Circulator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Stream_support.tag=../Stream_support
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Triangulation_2.tag=../Triangulation_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circular_kernel_2.tag=../Circular_kernel_2
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/GraphicsView/doc/GraphicsView/fig

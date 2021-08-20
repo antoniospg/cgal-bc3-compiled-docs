@@ -1,0 +1,36 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Mesh_3_defaults.dxy
+
+# macros to be used inside the code
+ALIASES += "cgalNamedParamsBegin=<dl class=\"params\"><dt>Named Parameters</dt><dd> <table class=\"params\">"
+ALIASES += "cgalNamedParamsEnd=</table> </dd> </dl>"
+ALIASES += "cgalParamBegin{1}=<tr><td class=\"paramname\">\ref PMP_\1 \"\1\"</td><td>"
+ALIASES += "cgalParamEnd=</td></tr>"
+ALIASES += "cgalDescribePolylineType=A polyline is defined as a sequence of points, each pair of contiguous points defines a segment of the polyline. If the first and last points of the polyline are identical, the polyline is closed."
+
+#macros for NamedParameters.txt
+ALIASES += "cgalNPTableBegin=<dl class=\"params\"><dt></dt><dd> <table class=\"params\">"
+ALIASES += "cgalNPTableEnd=</table> </dd> </dl>"
+ALIASES += "cgalNPBegin{1}=<tr><td class=\"paramname\">\1 </td><td>"
+ALIASES += "cgalNPEnd=</td></tr>"
+
+
+INPUT += \
+      /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/include//CGAL/Polyhedral_complex_mesh_domain_3.h \
+      /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/include//CGAL/Mesh_domain_with_polyline_features_3.h
+
+PROJECT_NAME = "CGAL 5.1 - 3D Mesh Generation"
+HTML_EXTRA_FILES           =  /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/implicit_domain_3.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/implicit_domain_4.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/implicit_domain_5.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/no-protection.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/protection-box.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/protection-all.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/no-custom-init.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/with-custom-init.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/hybrid_domain.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/hybrid_domain_mesh_no_protection.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/hybrid_domain_mesh_protection.jpg \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/protection-complex.png \
+                              /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/doc/Mesh_3/fig/no-protection-complex.png
+
+EXAMPLE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Mesh_3/include/

@@ -1,0 +1,34 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/BGL
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/BGL.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/doc/BGL/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/doc/BGL/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/doc/BGL
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circulator.tag=../Circulator
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Stream_support.tag=../Stream_support
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Arrangement_on_surface_2.tag=../Arrangement_on_surface_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/HalfedgeDS.tag=../HalfedgeDS
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polyhedron.tag=../Polyhedron
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Triangulation_2.tag=../Triangulation_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh.tag=../Surface_mesh
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh_simplification.tag=../Surface_mesh_simplification
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh_segmentation.tag=../Surface_mesh_segmentation
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh_deformation.tag=../Surface_mesh_deformation
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh_parameterization.tag=../Surface_mesh_parameterization
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Property_map.tag=../Property_map
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Nef_3.tag=../Nef_3
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Miscellany.tag=../Miscellany
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polygon_mesh_processing.tag=../Polygon_mesh_processing
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Combinatorial_map.tag=../Combinatorial_map
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Linear_cell_complex.tag=../Linear_cell_complex
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/BGL/doc/BGL/fig

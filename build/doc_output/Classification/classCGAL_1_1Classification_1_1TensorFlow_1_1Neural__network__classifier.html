@@ -1,0 +1,401 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/png" href="../Manual/g-196x196-doc.png"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CGAL 5.1 - Classification: CGAL::Classification::TensorFlow::Neural_network_classifier&lt; ActivationFunction &gt; Class Template Reference</title>
+<!-- <link href="../Manual/tabs.css" rel="stylesheet" type="text/css"/> -->
+<script type="text/javascript" src="../Manual/jquery.js"></script>
+<script type="text/javascript" src="../Manual/dynsections.js"></script>
+<!-- Manually include treeview and search to avoid bloat and to fix
+     paths to the directory Manual . -->
+<!-- $.treeview -->
+<!-- $.search -->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/searchdata.js"></script>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<!-- Manually done below. -->
+<link href="../Manual/stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../Manual/cgal_stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+      }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script src="../Manual/hacks.js" type="text/javascript"></script>
+<script src="modules.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://www.cgal.org/">cgal.org</a></li>
+    <li><a href="../Manual/index.html">Top</a></li>
+    <li><a href="../Manual/general_intro.html">Getting Started</a></li>
+    <li><a href="../Manual/tutorials.html">Tutorials</a></li>
+    <li><a href="../Manual/packages.html">Package Overview</a></li>
+    <li><a href="../Manual/how_to_cite_cgal.html">Acknowledging CGAL</a></li>
+  </ul>
+  <!-- In a package SEARCHENGINE = false, so we cannot use 
+       insertion. That's why we have to do it manually here. Notice
+       that we also take pngs from the Manual. -->
+  <div id="MSearchBox" class="MSearchBoxInactive">
+    <span class="left">
+      <img id="MSearchSelect" src="../Manual/search/mag_sel.png"
+           onmouseover="return searchBox.OnSearchSelectShow()"
+           onmouseout="return searchBox.OnSearchSelectHide()"
+           alt=""/>
+      <input type="text" id="MSearchField" value="Search" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)"
+             onblur="searchBox.OnSearchFieldFocus(false)"
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+    </span><span class="right">
+      <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../Manual/search/close.png" alt=""/></a>
+    </span>
+  </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CGAL 5.1 - Classification
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- Code below is usually inserted by doxygen when SEARCHENGINE =
+     true. Notice that the path to the search directory is adjusted to
+     the top-level.-->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../Manual/search",false,'Search');
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0"
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier-members.html">List of all members</a>  </div>
+  <div class="headertitle">
+<div class="title">CGAL::Classification::TensorFlow::Neural_network_classifier&lt; ActivationFunction &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__PkgClassificationRef.html">Classification Reference</a> &raquo; <a class="el" href="group__PkgClassificationClassifiers.html">Classifiers</a> &raquo; <a class="el" href="group__PkgClassificationClassifiersTensorFlow.html">TensorFlow</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;CGAL/Classification/TensorFlow/Neural_network_classifier.h&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Definition</h2>
+<div class="textblock"><h3>template&lt;typename ActivationFunction = tensorflow::ops::Relu&gt;<br />
+class CGAL::Classification::TensorFlow::Neural_network_classifier&lt; ActivationFunction &gt;</h3>
+
+<p>Classifier based on the <a class="el" href="namespaceCGAL_1_1Classification_1_1TensorFlow.html">TensorFlow</a> version of the neural network algorithm. </p>
+<p>This class provides an interface to a feature-based neural network: a set of features is used as an input layer followed by a user-specified number of hidden layers with a user-specified activation function. The output layer is a softmax layer providing, for each label, the probability that an input item belongs to it.</p>
+<dl class="section warning"><dt>Warning</dt><dd>This feature is still experimental: it may not be stable and is likely to undergo substantial changes in future releases of <span style="font-variant: small-caps;">CGAL</span>. The API changes will be announced in the release notes.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>This class requires the thirdpartyTensorFlow library.</dd></dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">ActivationFunction</td><td>Chosen activation function for the hidden layers. <code>Relu</code> is used as default. The following functions can be used (please refer to the documentation of thirdpartyTensorFlow for more information):<ul>
+<li><code>tensorflow::ops::Elu</code></li>
+<li><code>tensorflow::ops::Relu6</code></li>
+<li><code>tensorflow::ops::Relu</code></li>
+<li><code>tensorflow::ops::Selu</code></li>
+<li><code>tensorflow::ops::Sigmoid</code></li>
+<li><code>tensorflow::ops::Tanh</code></li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="models"><dt><b><a class="el" href="models.html#_models000012">Is Model Of:</a></b></dt><dd><code><a class="el" href="classCGAL_1_1Classification_1_1Classifier.html" title="Concept describing a classifier used by classification functions (see CGAL::Classification::classify(...">CGAL::Classification::Classifier</a></code> </dd></dl>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Constructor</h2></td></tr>
+<tr class="memitem:af63f91991d2439f6424df396f64f36c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#af63f91991d2439f6424df396f64f36c8">Neural_network_classifier</a> (const <a class="el" href="classCGAL_1_1Classification_1_1Label__set.html">Label_set</a> &amp;labels, const <a class="el" href="classCGAL_1_1Classification_1_1Feature__set.html">Feature_set</a> &amp;features)</td></tr>
+<tr class="memdesc:af63f91991d2439f6424df396f64f36c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Instantiates the classifier using the sets of <code>labels</code> and <code>features</code>.  <a href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#af63f91991d2439f6424df396f64f36c8">More...</a><br /></td></tr>
+<tr class="separator:af63f91991d2439f6424df396f64f36c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Training</h2></td></tr>
+<tr class="memitem:aa81df75a653f3be83809b09a6c8e6012"><td class="memTemplParams" colspan="2">template&lt;typename LabelIndexRange &gt; </td></tr>
+<tr class="memitem:aa81df75a653f3be83809b09a6c8e6012"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#aa81df75a653f3be83809b09a6c8e6012">train</a> (const LabelIndexRange &amp;ground_truth, bool restart_from_scratch=true, std::size_t number_of_iterations=5000, float learning_rate=0.01, std::size_t batch_size=1000, const std::vector&lt; std::size_t &gt; &amp;hidden_layers=std::vector&lt; std::size_t &gt;())</td></tr>
+<tr class="memdesc:aa81df75a653f3be83809b09a6c8e6012"><td class="mdescLeft">&#160;</td><td class="mdescRight">Runs the training algorithm.  <a href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#aa81df75a653f3be83809b09a6c8e6012">More...</a><br /></td></tr>
+<tr class="separator:aa81df75a653f3be83809b09a6c8e6012"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Input/Output</h2></td></tr>
+<tr class="memitem:a2189d01b458b300f709fad677f370ec7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#a2189d01b458b300f709fad677f370ec7">save_configuration</a> (std::ostream &amp;output)</td></tr>
+<tr class="memdesc:a2189d01b458b300f709fad677f370ec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the current configuration in the stream <code>output</code>.  <a href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#a2189d01b458b300f709fad677f370ec7">More...</a><br /></td></tr>
+<tr class="separator:a2189d01b458b300f709fad677f370ec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21e93fd4d284eee305251e4f94a0d44a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#a21e93fd4d284eee305251e4f94a0d44a">load_configuration</a> (std::istream &amp;input, bool verbose=false)</td></tr>
+<tr class="memdesc:a21e93fd4d284eee305251e4f94a0d44a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a configuration from the stream <code>input</code>.  <a href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#a21e93fd4d284eee305251e4f94a0d44a">More...</a><br /></td></tr>
+<tr class="separator:a21e93fd4d284eee305251e4f94a0d44a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="af63f91991d2439f6424df396f64f36c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af63f91991d2439f6424df396f64f36c8">&#9670;&nbsp;</a></span>Neural_network_classifier()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ActivationFunction  = tensorflow::ops::Relu&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html">CGAL::Classification::TensorFlow::Neural_network_classifier</a>&lt; ActivationFunction &gt;::<a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html">Neural_network_classifier</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classCGAL_1_1Classification_1_1Label__set.html">Label_set</a> &amp;&#160;</td>
+          <td class="paramname"><em>labels</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="classCGAL_1_1Classification_1_1Feature__set.html">Feature_set</a> &amp;&#160;</td>
+          <td class="paramname"><em>features</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Instantiates the classifier using the sets of <code>labels</code> and <code>features</code>. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a21e93fd4d284eee305251e4f94a0d44a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21e93fd4d284eee305251e4f94a0d44a">&#9670;&nbsp;</a></span>load_configuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ActivationFunction  = tensorflow::ops::Relu&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html">CGAL::Classification::TensorFlow::Neural_network_classifier</a>&lt; ActivationFunction &gt;::load_configuration </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>input</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>verbose</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a configuration from the stream <code>input</code>. </p>
+<p>The input file should be in the XML format written by the <code><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#a2189d01b458b300f709fad677f370ec7" title="Saves the current configuration in the stream output.">save_configuration()</a></code> method. The feature set of the classifier should contain the exact same features in the exact same order as the ones present when the file was generated using <code><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#a2189d01b458b300f709fad677f370ec7" title="Saves the current configuration in the stream output.">save_configuration()</a></code>. </p>
+
+</div>
+</div>
+<a id="a2189d01b458b300f709fad677f370ec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2189d01b458b300f709fad677f370ec7">&#9670;&nbsp;</a></span>save_configuration()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ActivationFunction  = tensorflow::ops::Relu&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html">CGAL::Classification::TensorFlow::Neural_network_classifier</a>&lt; ActivationFunction &gt;::save_configuration </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>output</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Saves the current configuration in the stream <code>output</code>. </p>
+<p>This allows to easily save and recover a specific classification configuration, that is to say:</p>
+<ul>
+<li>The statistics of features (mean and standard deviation)</li>
+<li>The number of hiddens layers and their respectives sizes</li>
+<li>The weights and bias of the neurons</li>
+</ul>
+<p>The output file is written in an XML format that is readable by the <code><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html#a21e93fd4d284eee305251e4f94a0d44a" title="Loads a configuration from the stream input.">load_configuration()</a></code> method. </p>
+
+</div>
+</div>
+<a id="aa81df75a653f3be83809b09a6c8e6012"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa81df75a653f3be83809b09a6c8e6012">&#9670;&nbsp;</a></span>train()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename ActivationFunction  = tensorflow::ops::Relu&gt; </div>
+<div class="memtemplate">
+template&lt;typename LabelIndexRange &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html">CGAL::Classification::TensorFlow::Neural_network_classifier</a>&lt; ActivationFunction &gt;::train </td>
+          <td>(</td>
+          <td class="paramtype">const LabelIndexRange &amp;&#160;</td>
+          <td class="paramname"><em>ground_truth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>restart_from_scratch</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>number_of_iterations</em> = <code>5000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>learning_rate</em> = <code>0.01</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>batch_size</em> = <code>1000</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>hidden_layers</em> = <code>std::vector&lt;std::size_t&gt;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Runs the training algorithm. </p>
+<p>From the set of provided ground truth, this algorithm constructs a neural network and applies an Adam optimizer to set up the weights and bias that produce the most accurate result with respect to this ground truth.</p>
+<dl class="section pre"><dt>Precondition</dt><dd>At least one ground truth item should be assigned to each label.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ground_truth</td><td>vector of label indices. It should contain for each input item, in the same order as the input set, the index of the corresponding label in the <code><a class="el" href="classCGAL_1_1Classification_1_1Label__set.html" title="Set of Label used as input by classification algorithms.">Label_set</a></code> provided in the constructor. Input items that do not have a ground truth information should be given the value <code>-1</code>.</td></tr>
+    <tr><td class="paramname">restart_from_scratch</td><td>should be set to <code>false</code> if the user wants to continue adjusting weights and bias based, and set to <code>true</code> if the neural network should be re-created from scratch (discarding all previous training results).</td></tr>
+    <tr><td class="paramname">number_of_iterations</td><td>number of times the optimizer is called.</td></tr>
+    <tr><td class="paramname">learning_rate</td><td>describes the rate at which the optimizer changes the weights and bias.</td></tr>
+    <tr><td class="paramname">batch_size</td><td>size of the random subset of inliers used for optimizing at each iteration.</td></tr>
+    <tr><td class="paramname">hidden_layers</td><td>vector containing the consecutive sizes (number of neurons) of the hidden layers of the network. If no vector is given, the behavior used is the following: 2 hidden layers are used. The first layer has as many neurons as the number of features; the second layer has a number of neurons equal to the average value between the number of features and the number of labels. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- start footer part -->
+<!-- The footer div is not part of the default but we require it to
+move the footer to the bottom of the page. -->
+<div id="footer">
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceCGAL.html">CGAL</a></li><li class="navelem"><a class="el" href="namespaceCGAL_1_1Classification.html">Classification</a></li><li class="navelem"><a class="el" href="namespaceCGAL_1_1Classification_1_1TensorFlow.html">TensorFlow</a></li><li class="navelem"><a class="el" href="classCGAL_1_1Classification_1_1TensorFlow_1_1Neural__network__classifier.html">Neural_network_classifier</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

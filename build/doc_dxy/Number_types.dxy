@@ -1,0 +1,7 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Number_types_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - Number Types"
+INPUT += /home/antonio/Documentos/gsoc/cgal-public-dev/Number_types/include//CGAL/Exact_integer.h \
+         /home/antonio/Documentos/gsoc/cgal-public-dev/Number_types/include//CGAL/Exact_rational.h
+
+SHOW_FILES = YES

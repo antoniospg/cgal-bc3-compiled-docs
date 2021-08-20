@@ -1,0 +1,5 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/QP_solver_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - Linear and Quadratic Programming Solver"
+
+EXCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/QP_solver/doc/QP_solver/fig_src

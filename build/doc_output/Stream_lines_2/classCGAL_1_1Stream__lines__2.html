@@ -1,0 +1,591 @@
+<!-- HTML header for doxygen 1.8.13-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="icon" type="image/png" href="../Manual/g-196x196-doc.png"/>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>CGAL 5.1 - 2D Placement of Streamlines: CGAL::Stream_lines_2&lt; VectorField_2, Integrator_2 &gt; Class Template Reference</title>
+<!-- <link href="../Manual/tabs.css" rel="stylesheet" type="text/css"/> -->
+<script type="text/javascript" src="../Manual/jquery.js"></script>
+<script type="text/javascript" src="../Manual/dynsections.js"></script>
+<!-- Manually include treeview and search to avoid bloat and to fix
+     paths to the directory Manual . -->
+<!-- $.treeview -->
+<!-- $.search -->
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/searchdata.js"></script>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { init_search(); });
+</script>
+<link href="../Manual/search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="../Manual/search/search.js"></script>
+<!-- Manually done below. -->
+<link href="../Manual/stylesheet.css" rel="stylesheet" type="text/css" />
+<!-- This should probably be an extrastylesheet instead of hardcoded. -->
+<link href="../Manual/cgal_stylesheet.css" rel="stylesheet" type="text/css" />
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  TeX: { equationNumbers: { autoNumber: "AMS" } }
+});
+</script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX","output/HTML-CSS"],
+});
+//<![CDATA[
+MathJax.Hub.Config(
+{
+  TeX: {
+      Macros: {
+          qprel: [ "{\\gtreqless}", 0],
+          qpx: [ "{\\mathbf{x}}", 0],
+          qpl: [ "{\\mathbf{l}}", 0],
+          qpu: [ "{\\mathbf{u}}", 0],
+          qpc: [ "{\\mathbf{c}}", 0],
+          qpb: [ "{\\mathbf{b}}", 0],
+          qpy: [ "{\\mathbf{y}}", 0],
+          qpw: [ "{\\mathbf{w}}", 0],
+          qplambda: [ "{\\mathbf{\\lambda}}", 0],
+          ssWpoint: [ "{\\bf #1}", 1],
+          ssWeight: [ "{w_{#1}}", 1],
+          dabs: [ "{\\parallel\\! #1 \\!\\parallel}", 1],
+          E: [ "{\\mathrm{E}}", 0],
+          A: [ "{\\mathrm{A}}", 0],
+          R: [ "{\\mathrm{R}}", 0],
+          N: [ "{\\mathrm{N}}", 0],
+          Q: [ "{\\mathrm{Q}}", 0],
+          Z: [ "{\\mathrm{Z}}", 0],
+          ccSum: [ "{\\sum_{#1}^{#2}{#3}}", 3],
+          ccProd: [ "{\\prod_{#1}^{#2}{#3}}", 3],
+          pyr: [ "{\\operatorname{Pyr}}", 0],
+          aff: [ "{\\operatorname{aff}}", 0],
+      }
+  }
+}
+);
+//]]>
+</script>
+<script type="text/javascript" async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js"></script>
+<script src="../Manual/hacks.js" type="text/javascript"></script>
+<script src="modules.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="back-nav">
+  <ul>
+    <li><a href="https://www.cgal.org/">cgal.org</a></li>
+    <li><a href="../Manual/index.html">Top</a></li>
+    <li><a href="../Manual/general_intro.html">Getting Started</a></li>
+    <li><a href="../Manual/tutorials.html">Tutorials</a></li>
+    <li><a href="../Manual/packages.html">Package Overview</a></li>
+    <li><a href="../Manual/how_to_cite_cgal.html">Acknowledging CGAL</a></li>
+  </ul>
+  <!-- In a package SEARCHENGINE = false, so we cannot use 
+       insertion. That's why we have to do it manually here. Notice
+       that we also take pngs from the Manual. -->
+  <div id="MSearchBox" class="MSearchBoxInactive">
+    <span class="left">
+      <img id="MSearchSelect" src="../Manual/search/mag_sel.png"
+           onmouseover="return searchBox.OnSearchSelectShow()"
+           onmouseout="return searchBox.OnSearchSelectHide()"
+           alt=""/>
+      <input type="text" id="MSearchField" value="Search" accesskey="S"
+             onfocus="searchBox.OnSearchFieldFocus(true)"
+             onblur="searchBox.OnSearchFieldFocus(false)"
+             onkeyup="searchBox.OnSearchFieldChange(event)"/>
+    </span><span class="right">
+      <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="../Manual/search/close.png" alt=""/></a>
+    </span>
+  </div>
+</div>
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">CGAL 5.1 - 2D Placement of Streamlines
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- Code below is usually inserted by doxygen when SEARCHENGINE =
+     true. Notice that the path to the search directory is adjusted to
+     the top-level.-->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "../Manual/search",false,'Search');
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0"
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+<!-- end header part -->
+<!-- Generated by Doxygen 1.8.17 -->
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classCGAL_1_1Stream__lines__2.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="classCGAL_1_1Stream__lines__2-members.html">List of all members</a> &#124;
+<a href="#pub-methods">Public Member Functions</a>  </div>
+  <div class="headertitle">
+<div class="title">CGAL::Stream_lines_2&lt; VectorField_2, Integrator_2 &gt; Class Template Reference<div class="ingroups"><a class="el" href="group__PkgStreamLines2Ref.html">2D Placement of Streamlines Reference</a></div></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;CGAL/Stream_lines_2.h&gt;</code></p>
+<a name="details" id="details"></a><h2 class="groupheader">Definition</h2>
+<div class="textblock"><h3>template&lt;typename VectorField_2, typename Integrator_2&gt;<br />
+class CGAL::Stream_lines_2&lt; VectorField_2, Integrator_2 &gt;</h3>
+
+<p>The class <code><a class="el" href="classCGAL_1_1Stream__lines__2.html">Stream_lines_2</a></code> generates a placement of streamlines in a 2D domain according to a bidimensional vector field.</p>
+<p>The class places streamlines according to a specified density and gives access to the generated streamlines via two iterators over a container of iterators that provide access to the streamline points.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname"><a class="el" href="classVectorField__2.html" title="The concept VectorField_2 describes the set of requirements for the first template parameter of the c...">VectorField_2</a></td><td>must be a model of the concept <code><a class="el" href="classVectorField__2.html" title="The concept VectorField_2 describes the set of requirements for the first template parameter of the c...">VectorField_2</a></code>. </td></tr>
+    <tr><td class="paramname"><a class="el" href="classIntegrator__2.html" title="The concept Integrator_2 describes the set of requirements for the second template parameter of the c...">Integrator_2</a></td><td>is a function object and must be a model of the concept <code><a class="el" href="classIntegrator__2.html" title="The concept Integrator_2 describes the set of requirements for the second template parameter of the c...">Integrator_2</a></code>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section examples"><dt>Examples</dt><dd><a class="el" href="Stream_lines_2_2stl_regular_field_8cpp-example.html#_a4">Stream_lines_2/stl_regular_field.cpp</a>, and <a class="el" href="Stream_lines_2_2stl_triangular_field_8cpp-example.html#_a4">Stream_lines_2/stl_triangular_field.cpp</a>.</dd>
+</dl>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a4e3bb1cb29874f3117c7105a47d079da"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a4e3bb1cb29874f3117c7105a47d079da">Stream_lines_2</a> (<a class="el" href="classVectorField__2.html">VectorField_2</a> vector_field_2, <a class="el" href="classIntegrator__2.html">Integrator_2</a> integrator_2, <a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a> separating_distance, <a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a> saturation_ratio)</td></tr>
+<tr class="memdesc:a4e3bb1cb29874f3117c7105a47d079da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor which generates a streamline placement.  <a href="classCGAL_1_1Stream__lines__2.html#a4e3bb1cb29874f3117c7105a47d079da">More...</a><br /></td></tr>
+<tr class="separator:a4e3bb1cb29874f3117c7105a47d079da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Types</h2></td></tr>
+<tr class="memitem:a718b1dfb8a1d706d84c56c8534734a89"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classVectorField__2.html#a187efad7dc67622cef1ddd35c9b5a0ad">VectorField_2::Geom_traits</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a718b1dfb8a1d706d84c56c8534734a89">Geom_traits</a></td></tr>
+<tr class="memdesc:a718b1dfb8a1d706d84c56c8534734a89"><td class="mdescLeft">&#160;</td><td class="mdescRight">the traits class.  <a href="classCGAL_1_1Stream__lines__2.html#a718b1dfb8a1d706d84c56c8534734a89">More...</a><br /></td></tr>
+<tr class="separator:a718b1dfb8a1d706d84c56c8534734a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2dfcfa329021f34623a20bf687377d3b"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classVectorField__2.html#abe1c308d3248015491d62d1fa7e17e47">VectorField_2::FT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a></td></tr>
+<tr class="memdesc:a2dfcfa329021f34623a20bf687377d3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">the scalar type.  <a href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">More...</a><br /></td></tr>
+<tr class="separator:a2dfcfa329021f34623a20bf687377d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ba491a81c6b77b7f1ce4345b046d1ce"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classVectorField__2.html#ae22255599f02660bd6c49379b09cec37">VectorField_2::Point_2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a6ba491a81c6b77b7f1ce4345b046d1ce">Point_2</a></td></tr>
+<tr class="memdesc:a6ba491a81c6b77b7f1ce4345b046d1ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">the point type.  <a href="classCGAL_1_1Stream__lines__2.html#a6ba491a81c6b77b7f1ce4345b046d1ce">More...</a><br /></td></tr>
+<tr class="separator:a6ba491a81c6b77b7f1ce4345b046d1ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4be79d76014ac7a7713c7a2b98273a64"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="classVectorField__2.html#a48549dca046a8b61288d3e7b563181b3">VectorField_2::Vector_2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a4be79d76014ac7a7713c7a2b98273a64">Vector_2</a></td></tr>
+<tr class="memdesc:a4be79d76014ac7a7713c7a2b98273a64"><td class="mdescLeft">&#160;</td><td class="mdescRight">the vector type.  <a href="classCGAL_1_1Stream__lines__2.html#a4be79d76014ac7a7713c7a2b98273a64">More...</a><br /></td></tr>
+<tr class="separator:a4be79d76014ac7a7713c7a2b98273a64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Streamline Iterators</h2></td></tr>
+<tr class="memitem:adf99422a770225f51a660b1cf05a9489"><td class="memItemLeft" align="right" valign="top">typedef unspecified_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#adf99422a770225f51a660b1cf05a9489">Point_iterator_2</a></td></tr>
+<tr class="memdesc:adf99422a770225f51a660b1cf05a9489"><td class="mdescLeft">&#160;</td><td class="mdescRight">iterator of points with value type <code><a class="elRef" href="../Kernel_23/classCGAL_1_1Point__2.html">Point_2</a></code>.  <a href="classCGAL_1_1Stream__lines__2.html#adf99422a770225f51a660b1cf05a9489">More...</a><br /></td></tr>
+<tr class="separator:adf99422a770225f51a660b1cf05a9489"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa64d6aafd1bb006151eabad262bd6071"><td class="memItemLeft" align="right" valign="top">typedef unspecified_type&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#aa64d6aafd1bb006151eabad262bd6071">Stream_line_iterator_2</a></td></tr>
+<tr class="memdesc:aa64d6aafd1bb006151eabad262bd6071"><td class="mdescLeft">&#160;</td><td class="mdescRight">an iterator to visit the streamlines with value type <code>std::pair&lt;Point_iterator_2, Point_iterator_2&gt;</code>.  <a href="classCGAL_1_1Stream__lines__2.html#aa64d6aafd1bb006151eabad262bd6071">More...</a><br /></td></tr>
+<tr class="separator:aa64d6aafd1bb006151eabad262bd6071"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7b718ab4afdc80c5ea76835d3e031c4"><td class="memItemLeft" align="right" valign="top">Stream_line_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#ac7b718ab4afdc80c5ea76835d3e031c4">begin</a> () const</td></tr>
+<tr class="memdesc:ac7b718ab4afdc80c5ea76835d3e031c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts at the first streamline.  <a href="classCGAL_1_1Stream__lines__2.html#ac7b718ab4afdc80c5ea76835d3e031c4">More...</a><br /></td></tr>
+<tr class="separator:ac7b718ab4afdc80c5ea76835d3e031c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1954aaaa744ba5cd2ea1eb5dc7423c22"><td class="memItemLeft" align="right" valign="top">Stream_line_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a1954aaaa744ba5cd2ea1eb5dc7423c22">end</a> () const</td></tr>
+<tr class="memdesc:a1954aaaa744ba5cd2ea1eb5dc7423c22"><td class="mdescLeft">&#160;</td><td class="mdescRight">Past-the-end iterator.  <a href="classCGAL_1_1Stream__lines__2.html#a1954aaaa744ba5cd2ea1eb5dc7423c22">More...</a><br /></td></tr>
+<tr class="separator:a1954aaaa744ba5cd2ea1eb5dc7423c22"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Modifiers</h2></td></tr>
+<tr class="memitem:aa7eb1540bd4b05dfbbc4284a75016667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#aa7eb1540bd4b05dfbbc4284a75016667">set_separating_distance</a> (<a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a> new_value)</td></tr>
+<tr class="memdesc:aa7eb1540bd4b05dfbbc4284a75016667"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify the separating distance.  <a href="classCGAL_1_1Stream__lines__2.html#aa7eb1540bd4b05dfbbc4284a75016667">More...</a><br /></td></tr>
+<tr class="separator:aa7eb1540bd4b05dfbbc4284a75016667"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42d1efe066b53e75233243dcd621158c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a42d1efe066b53e75233243dcd621158c">set_saturation_ratio</a> (<a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a> new_value)</td></tr>
+<tr class="memdesc:a42d1efe066b53e75233243dcd621158c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modify the saturation ratio.  <a href="classCGAL_1_1Stream__lines__2.html#a42d1efe066b53e75233243dcd621158c">More...</a><br /></td></tr>
+<tr class="separator:a42d1efe066b53e75233243dcd621158c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceeb6caac5bb91a16f392eaf6ef4c865"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#aceeb6caac5bb91a16f392eaf6ef4c865">update</a> ()</td></tr>
+<tr class="memdesc:aceeb6caac5bb91a16f392eaf6ef4c865"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the placement after changing the separating distance or the saturation ratio.  <a href="classCGAL_1_1Stream__lines__2.html#aceeb6caac5bb91a16f392eaf6ef4c865">More...</a><br /></td></tr>
+<tr class="separator:aceeb6caac5bb91a16f392eaf6ef4c865"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="member-group"></a>
+Access Functions</h2></td></tr>
+<tr class="memitem:a7a8393fe30d913a911f7c1ed01f2c9b4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a7a8393fe30d913a911f7c1ed01f2c9b4">get_separating_distance</a> () const</td></tr>
+<tr class="memdesc:a7a8393fe30d913a911f7c1ed01f2c9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the separating distance.  <a href="classCGAL_1_1Stream__lines__2.html#a7a8393fe30d913a911f7c1ed01f2c9b4">More...</a><br /></td></tr>
+<tr class="separator:a7a8393fe30d913a911f7c1ed01f2c9b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b69c7c9d46a0d5204e3d8021338e50b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a0b69c7c9d46a0d5204e3d8021338e50b">get_saturation_ratio</a> () const</td></tr>
+<tr class="memdesc:a0b69c7c9d46a0d5204e3d8021338e50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the saturation ratio.  <a href="classCGAL_1_1Stream__lines__2.html#a0b69c7c9d46a0d5204e3d8021338e50b">More...</a><br /></td></tr>
+<tr class="separator:a0b69c7c9d46a0d5204e3d8021338e50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703411e4333741d4e6fe19c22c85b14e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a703411e4333741d4e6fe19c22c85b14e">print_stream_lines</a> (std::ofstream &amp;fw)</td></tr>
+<tr class="memdesc:a703411e4333741d4e6fe19c22c85b14e"><td class="mdescLeft">&#160;</td><td class="mdescRight">prints the streamlines to an ASCII file: line by line, and point by point.  <a href="classCGAL_1_1Stream__lines__2.html#a703411e4333741d4e6fe19c22c85b14e">More...</a><br /></td></tr>
+<tr class="separator:a703411e4333741d4e6fe19c22c85b14e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Member Typedef Documentation</h2>
+<a id="a2dfcfa329021f34623a20bf687377d3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2dfcfa329021f34623a20bf687377d3b">&#9670;&nbsp;</a></span>FT</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classVectorField__2.html#abe1c308d3248015491d62d1fa7e17e47">VectorField_2::FT</a> <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::<a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the scalar type. </p>
+
+</div>
+</div>
+<a id="a718b1dfb8a1d706d84c56c8534734a89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a718b1dfb8a1d706d84c56c8534734a89">&#9670;&nbsp;</a></span>Geom_traits</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classVectorField__2.html#a187efad7dc67622cef1ddd35c9b5a0ad">VectorField_2::Geom_traits</a> <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::<a class="el" href="classCGAL_1_1Stream__lines__2.html#a718b1dfb8a1d706d84c56c8534734a89">Geom_traits</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the traits class. </p>
+
+</div>
+</div>
+<a id="a6ba491a81c6b77b7f1ce4345b046d1ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ba491a81c6b77b7f1ce4345b046d1ce">&#9670;&nbsp;</a></span>Point_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classVectorField__2.html#ae22255599f02660bd6c49379b09cec37">VectorField_2::Point_2</a> <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::<a class="el" href="classCGAL_1_1Stream__lines__2.html#a6ba491a81c6b77b7f1ce4345b046d1ce">Point_2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the point type. </p>
+
+</div>
+</div>
+<a id="adf99422a770225f51a660b1cf05a9489"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf99422a770225f51a660b1cf05a9489">&#9670;&nbsp;</a></span>Point_iterator_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unspecified_type <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::<a class="el" href="classCGAL_1_1Stream__lines__2.html#adf99422a770225f51a660b1cf05a9489">Point_iterator_2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>iterator of points with value type <code><a class="elRef" href="../Kernel_23/classCGAL_1_1Point__2.html">Point_2</a></code>. </p>
+
+</div>
+</div>
+<a id="aa64d6aafd1bb006151eabad262bd6071"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa64d6aafd1bb006151eabad262bd6071">&#9670;&nbsp;</a></span>Stream_line_iterator_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef unspecified_type <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::<a class="el" href="classCGAL_1_1Stream__lines__2.html#aa64d6aafd1bb006151eabad262bd6071">Stream_line_iterator_2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>an iterator to visit the streamlines with value type <code>std::pair&lt;Point_iterator_2, Point_iterator_2&gt;</code>. </p>
+
+</div>
+</div>
+<a id="a4be79d76014ac7a7713c7a2b98273a64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4be79d76014ac7a7713c7a2b98273a64">&#9670;&nbsp;</a></span>Vector_2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef <a class="el" href="classVectorField__2.html#a48549dca046a8b61288d3e7b563181b3">VectorField_2::Vector_2</a> <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::<a class="el" href="classCGAL_1_1Stream__lines__2.html#a4be79d76014ac7a7713c7a2b98273a64">Vector_2</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>the vector type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a4e3bb1cb29874f3117c7105a47d079da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e3bb1cb29874f3117c7105a47d079da">&#9670;&nbsp;</a></span>Stream_lines_2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::<a class="el" href="classCGAL_1_1Stream__lines__2.html">Stream_lines_2</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classVectorField__2.html">VectorField_2</a>&#160;</td>
+          <td class="paramname"><em>vector_field_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classIntegrator__2.html">Integrator_2</a>&#160;</td>
+          <td class="paramname"><em>integrator_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a>&#160;</td>
+          <td class="paramname"><em>separating_distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a>&#160;</td>
+          <td class="paramname"><em>saturation_ratio</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor which generates a streamline placement. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac7b718ab4afdc80c5ea76835d3e031c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7b718ab4afdc80c5ea76835d3e031c4">&#9670;&nbsp;</a></span>begin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Stream_line_iterator <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::begin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Starts at the first streamline. </p>
+
+</div>
+</div>
+<a id="a1954aaaa744ba5cd2ea1eb5dc7423c22"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1954aaaa744ba5cd2ea1eb5dc7423c22">&#9670;&nbsp;</a></span>end()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">Stream_line_iterator <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::end </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Past-the-end iterator. </p>
+
+</div>
+</div>
+<a id="a0b69c7c9d46a0d5204e3d8021338e50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0b69c7c9d46a0d5204e3d8021338e50b">&#9670;&nbsp;</a></span>get_saturation_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a> <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::get_saturation_ratio </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the saturation ratio. </p>
+
+</div>
+</div>
+<a id="a7a8393fe30d913a911f7c1ed01f2c9b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a8393fe30d913a911f7c1ed01f2c9b4">&#9670;&nbsp;</a></span>get_separating_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a> <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::get_separating_distance </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>returns the separating distance. </p>
+
+</div>
+</div>
+<a id="a703411e4333741d4e6fe19c22c85b14e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703411e4333741d4e6fe19c22c85b14e">&#9670;&nbsp;</a></span>print_stream_lines()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::print_stream_lines </td>
+          <td>(</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>fw</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>prints the streamlines to an ASCII file: line by line, and point by point. </p>
+
+</div>
+</div>
+<a id="a42d1efe066b53e75233243dcd621158c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42d1efe066b53e75233243dcd621158c">&#9670;&nbsp;</a></span>set_saturation_ratio()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::set_saturation_ratio </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a>&#160;</td>
+          <td class="paramname"><em>new_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modify the saturation ratio. </p>
+
+</div>
+</div>
+<a id="aa7eb1540bd4b05dfbbc4284a75016667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa7eb1540bd4b05dfbbc4284a75016667">&#9670;&nbsp;</a></span>set_separating_distance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::set_separating_distance </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classCGAL_1_1Stream__lines__2.html#a2dfcfa329021f34623a20bf687377d3b">FT</a>&#160;</td>
+          <td class="paramname"><em>new_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Modify the separating distance. </p>
+
+</div>
+</div>
+<a id="aceeb6caac5bb91a16f392eaf6ef4c865"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceeb6caac5bb91a16f392eaf6ef4c865">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename VectorField_2 , typename Integrator_2 &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classCGAL_1_1Stream__lines__2.html">CGAL::Stream_lines_2</a>&lt; <a class="el" href="classVectorField__2.html">VectorField_2</a>, <a class="el" href="classIntegrator__2.html">Integrator_2</a> &gt;::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the placement after changing the separating distance or the saturation ratio. </p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- HTML footer for doxygen 1.8.13-->
+<!-- start footer part -->
+<!-- The footer div is not part of the default but we require it to
+move the footer to the bottom of the page. -->
+<div id="footer">
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="namespaceCGAL.html">CGAL</a></li><li class="navelem"><a class="el" href="classCGAL_1_1Stream__lines__2.html">Stream_lines_2</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Optimal_transportation_reconstruction_2
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Optimal_transportation_reconstruction_2.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/doc/Optimal_transportation_reconstruction_2/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/doc/Optimal_transportation_reconstruction_2/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/doc/Optimal_transportation_reconstruction_2
+INPUT += /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/include/
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Triangulation_2.tag=../Triangulation_2
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Optimal_transportation_reconstruction_2/doc/Optimal_transportation_reconstruction_2/fig

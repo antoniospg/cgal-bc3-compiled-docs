@@ -1,0 +1,17 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Circular_kernel_2
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Circular_kernel_2/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Circular_kernel_2.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Circular_kernel_2/doc/Circular_kernel_2/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Circular_kernel_2/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Circular_kernel_2/doc/Circular_kernel_2/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Circular_kernel_2/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Circular_kernel_2/doc/Circular_kernel_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Number_types.tag=../Number_types
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Arrangement_on_surface_2.tag=../Arrangement_on_surface_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Circular_kernel_2/doc/Circular_kernel_2/fig

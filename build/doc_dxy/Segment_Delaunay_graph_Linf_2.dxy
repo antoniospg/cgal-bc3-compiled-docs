@@ -1,0 +1,2 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Segment_Delaunay_graph_Linf_2_defaults.dxy
+PROJECT_NAME = "CGAL 5.1 - L Infinity Segment Delaunay Graphs"

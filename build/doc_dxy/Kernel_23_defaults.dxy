@@ -1,0 +1,25 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Kernel_23
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Kernel_23/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Kernel_23.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Kernel_23/doc/Kernel_23/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Kernel_23/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Kernel_23/doc/Kernel_23/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Kernel_23/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Kernel_23/doc/Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_d.tag=../Kernel_d
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polygon.tag=../Polygon
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Convex_hull_2.tag=../Convex_hull_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Triangulation_2.tag=../Triangulation_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Mesh_2.tag=../Mesh_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Number_types.tag=../Number_types
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circular_kernel_2.tag=../Circular_kernel_2
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Circular_kernel_3.tag=../Circular_kernel_3
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polyhedron.tag=../Polyhedron
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Kernel_23/doc/Kernel_23/fig

@@ -1,0 +1,25 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/BaseDoxyfile
+OUTPUT_DIRECTORY = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_output/Solver_interface
+HTML_OUTPUT = .
+EXAMPLE_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/examples
+GENERATE_TAGFILE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_gen_tags/Solver_interface.tag
+STRIP_FROM_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/doc/Solver_interface/
+STRIP_FROM_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/include/
+STRIP_FROM_INC_PATH = /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/doc/Solver_interface/
+STRIP_FROM_INC_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/include/
+ALIASES += "cgalPkgDescriptionBegin{2}=\details "
+ALIASES += "cgalPkgManuals{2}=<div class=\"PkgManuals\"></div>"
+INPUT = /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/doc/Solver_interface
+INPUT += /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/include/
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Manual.tag=../Manual
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Kernel_23.tag=../Kernel_23
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/STL_Extension.tag=../STL_Extension
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Algebraic_foundations.tag=../Algebraic_foundations
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Miscellany.tag=../Miscellany
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh_parameterization.tag=../Surface_mesh_parameterization
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh_skeletonization.tag=../Surface_mesh_skeletonization
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Surface_mesh_deformation.tag=../Surface_mesh_deformation
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Jet_fitting_3.tag=../Jet_fitting_3
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Poisson_surface_reconstruction_3.tag=../Poisson_surface_reconstruction_3
+TAGFILES += /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_tags/Polygonal_surface_reconstruction.tag=../Polygonal_surface_reconstruction
+IMAGE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Solver_interface/doc/Solver_interface/fig

@@ -1,0 +1,7 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Arrangement_on_surface_2_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - 2D Arrangements"
+EXCLUDE_SYMBOLS           +=  Dcel         \
+                              FaceBase     \
+                              HalfedgeBase \
+                              VertexBase

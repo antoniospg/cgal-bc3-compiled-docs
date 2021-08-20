@@ -1,0 +1,4 @@
+@INCLUDE = /home/antonio/Documentos/gsoc/cgal-public-dev/build/doc_dxy/Polyhedron_defaults.dxy
+
+PROJECT_NAME = "CGAL 5.1 - 3D Polyhedral Surface"
+EXAMPLE_PATH += /home/antonio/Documentos/gsoc/cgal-public-dev/Polyhedron_IO/examples
